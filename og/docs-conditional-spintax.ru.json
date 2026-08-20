@@ -1,0 +1,11 @@
+{
+  "slug": "docs-conditional-spintax",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Value-driven ветвление в spintax-шаблонах. Три формы, правила truthy/falsy, двухпроходный пайплайн, и чем условие отличается от случайного выбора в {a|b}.",
+  "bytes": 88888,
+  "sha256": "79874b4f370a860e"
+}

@@ -1,0 +1,1154 @@
+/* =========================
+   Spintax Landing
+   BEM + logical properties
+   Mobile-first responsive
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+[hidden] { display: none !important; }
+a { color: inherit; }
+img, svg { display: block; }
+
+/* =========================
+   Utility
+   ========================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+/* =========================
+   Icon
+   ========================= */
+
+.icon {
+  width: 1em; height: 1em;
+  display: inline-block;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.icon--sm  { width: 0.875em; height: 0.875em; }
+.icon--lg  { width: 1.25em; height: 1.25em; }
+.icon--xl  { width: 1.5em; height: 1.5em; }
+.icon--2xl { width: 2em; height: 2em; }
+.icon--brand { fill: none; }
+
+/* =========================
+   Container
+   ========================= */
+
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .container { padding-inline: var(--space-5); }
+}
+
+/* =========================
+   Typography
+   ========================= */
+
+.text-display {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.1;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.text-title {
+  font-size: var(--fs-xl);
+  line-height: 1.25;
+  font-weight: var(--fw-semibold);
+  margin: 0;
+}
+
+.text-lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.text-body {
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.text-muted { color: var(--text-muted); }
+.text-center { text-align: center; }
+
+/* =========================
+   Button
+   ========================= */
+
+.btn {
+  font-size: var(--fs-control);
+  line-height: var(--lh-control);
+  padding-block: var(--control-pad-y);
+  padding-inline: var(--control-pad-x);
+  min-height: var(--control-min-height);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  white-space: nowrap;
+  border: var(--border-1) solid transparent;
+  border-radius: var(--r-pill);
+  font-weight: var(--fw-medium);
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-md);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Accent — gold CTA, the strongest action */
+.btn--accent {
+  background: var(--btn-accent-bg);
+  color: var(--btn-accent-text);
+  border-color: transparent;
+}
+.btn--accent:hover {
+  background: var(--btn-accent-bg-hover);
+  border-color: var(--btn-accent-border-hover);
+  box-shadow: var(--btn-accent-shadow-hover);
+}
+
+/* Primary — blue, secondary action */
+.btn--primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: transparent;
+}
+.btn--primary:hover {
+  background: var(--btn-primary-bg-hover);
+  border-color: var(--btn-primary-border-hover);
+  box-shadow: var(--btn-primary-shadow-hover);
+}
+
+/* Ghost — transparent with border, tertiary */
+.btn--ghost {
+  background: transparent;
+  color: var(--btn-ghost-text);
+  border-color: var(--btn-ghost-border);
+}
+.btn--ghost:hover {
+  background: var(--btn-ghost-bg-hover);
+  border-color: var(--btn-ghost-border-hover);
+}
+
+/* Muted — disabled-looking, non-interactive */
+.btn--muted {
+  background: transparent;
+  color: var(--btn-muted-text);
+  border-color: var(--btn-muted-border);
+  cursor: default;
+  opacity: 0.65;
+}
+.btn--muted:hover {
+  opacity: 0.75;
+}
+
+.btn--lg {
+  font-size: calc(var(--fs-control) * 1.05);
+  padding-block: calc(var(--control-pad-y) * var(--control-scale-lg));
+  padding-inline: calc(var(--control-pad-x) * var(--control-scale-lg));
+}
+
+.btn--sm {
+  font-size: calc(var(--fs-control) * var(--control-scale-sm));
+  padding-block: calc(var(--control-pad-y) * var(--control-scale-sm));
+  padding-inline: calc(var(--control-pad-x) * var(--control-scale-sm));
+}
+
+.btn .icon {
+  width: 1.1em; height: 1.1em;
+}
+
+/* =========================
+   Card
+   ========================= */
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.card__icon {
+  width: 2.5rem; height: 2.5rem;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.card__icon--blue {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.card__icon--gold {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.card__icon--magenta {
+  background: rgba(169, 20, 85, 0.12);
+  color: var(--magenta-700);
+}
+
+:root[data-theme="dark"] .card__icon--magenta {
+  color: var(--magenta-300);
+}
+
+/* Clickable card variant */
+a.card--link {
+  position: relative;
+  text-decoration: none;
+  transition: border-color var(--transition-md), box-shadow var(--transition-md);
+}
+a.card--link:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-subtle);
+}
+
+.card__badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background: var(--bg-raised, var(--bg-soft));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.1em 0.5em;
+  font-size: 0.7rem;
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.card__badge--accent {
+  background: var(--gold-300, #d6af3c);
+  border-color: var(--gold-300, #d6af3c);
+  color: var(--bg, #0b0e14);
+}
+
+.card__title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+}
+
+.card__text {
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* =========================
+   Badge
+   ========================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  padding: 0.2em 0.6em;
+  border-radius: var(--r-pill);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.badge--gold {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.badge--muted {
+  background: var(--border-subtle);
+  color: var(--text-subtle);
+  font-size: var(--fs-xs);
+}
+
+/* =========================
+   Section
+   ========================= */
+
+.section {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.section__header {
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-block-end: clamp(2rem, 4vw, 3rem);
+}
+
+.section__header .text-title {
+  margin-block-end: var(--space-2);
+}
+
+.section--alt {
+  background: var(--bg-elevated);
+}
+
+/* =========================
+   NAV
+   ========================= */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-block-end: 1px solid var(--border-subtle);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-block: var(--space-2);
+  min-height: 3.25rem;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  color: var(--text-main);
+  flex-shrink: 0;
+}
+
+.nav__logo svg {
+  width: 1.75em;
+  height: 1.75em;
+}
+
+.nav__links {
+  display: none;
+  align-items: center;
+  gap: var(--space-1);
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+@media (min-width: 768px) {
+  .nav__links { display: flex; }
+}
+
+.nav__links a {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.nav__links a:hover {
+  color: var(--text-main);
+  background: var(--bg-soft);
+}
+
+.nav__links a[aria-current] {
+  color: var(--accent);
+  font-weight: var(--fw-bold);
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-inline-start: auto;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem; height: 2rem;
+  background: transparent;
+  border: var(--border-1) solid var(--border-subtle);
+  border-radius: var(--r-pill);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  color: var(--text-main);
+  border-color: var(--border-strong);
+}
+
+/* Main menu — a grouped dropdown panel opened by the Menu button (replaces the flat
+   links + the old mobile menu). Absolute inside the sticky, backdrop-filtered .nav — NOT
+   fixed, which the header's backdrop-filter would clip (see .claude/rules/search.md);
+   this mirrors the .lang-dd dropdown, which already works in the same header. */
+.menu { position: relative; }
+
+.menu__trigger[aria-expanded="true"] { color: var(--text-main); border-color: var(--accent); }
+.menu__trigger .icon { margin-inline-end: .35em; }
+
+.menu__panel {
+  position: absolute; inset-inline-end: 0; top: calc(100% + .5rem);
+  z-index: 10;
+  display: grid; gap: var(--space-4);
+  width: min(92vw, 42rem);
+  max-height: min(78vh, 40rem); overflow-y: auto;
+  padding: var(--space-4);
+  background: var(--panel);
+  border: 1px solid var(--border-subtle); border-radius: var(--radius);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .38);
+  opacity: 0; pointer-events: none; transform: translateY(-6px);
+  transition: opacity .15s, transform .15s;
+}
+.menu.is-open .menu__panel { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+@media (min-width: 48rem) {
+  .menu__panel { grid-template-columns: repeat(2, minmax(11rem, 1fr)); }
+}
+
+.menu__section { min-width: 0; }
+.menu__group-title {
+  margin: 0 0 var(--space-1);
+  font-size: .72rem; font-weight: var(--fw-bold);
+  text-transform: uppercase; letter-spacing: .05em;
+  color: var(--text-muted);
+}
+.menu__list { list-style: none; margin: 0; padding: 0; }
+.menu__link {
+  display: flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-1) var(--space-2); border-radius: var(--radius);
+  font-size: var(--fs-sm); color: var(--text-muted); text-decoration: none;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+.menu__link:hover { color: var(--text-main); background: var(--bg-soft); }
+.menu__link[aria-current="page"] { color: var(--accent); font-weight: var(--fw-bold); }
+.menu__link .icon { flex-shrink: 0; }
+
+/* [TRAP] .card__badge is position:absolute — written for the corner of a .card. A menu link is
+   not a positioned ancestor, so all sixteen EN badges stacked in the panel's own corner: one
+   was visible, and hovering it highlighted whichever link happened to be rendered last. Inside
+   a link the badge is just another flex child, parked at the end of the row. */
+.menu__link .card__badge {
+  position: static;
+  margin-inline-start: auto;
+  flex-shrink: 0;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  padding-block: clamp(4rem, 10vw, 7rem) clamp(3rem, 6vw, 5rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animated brand ribbon as a muted, blurred hero backdrop (behind the copy). */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.hero__bg-mark {
+  width: min(760px, 116%);
+  height: auto;
+  opacity: 0.22;
+  filter: blur(5px);
+  transform: translateZ(0);
+}
+
+.hero__badge {
+  margin-block-end: var(--space-3);
+}
+
+.hero__title {
+  max-width: 720px;
+  margin-inline: auto;
+  margin-block-end: var(--space-3);
+}
+
+.hero__subtitle {
+  max-width: 560px;
+  margin-inline: auto;
+  margin-block-end: var(--space-5);
+  font-size: clamp(1.05rem, 1rem + 0.5vw, 1.25rem);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+/* =========================
+   FEATURES
+   ========================= */
+
+.features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 480px) {
+  .features__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .features__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Three-card rows outside the Key Features grid: the WordPress runtime
+   specifics (bindings, object cache, cron) under the plugin CTA, and the
+   three engine packages under Open Source. */
+.features__grid--trio {
+  margin-block-start: var(--space-6);
+  text-align: start;
+}
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  /* Odd card count: let the last one span the row instead of dangling. */
+  .features__grid--trio > .card:last-child { grid-column: 1 / -1; }
+}
+
+/* Package cards: install line + registry links. */
+.pkg__install {
+  display: block;
+  margin-block-start: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius-xs);
+  background: var(--code-bg);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Buttons inside a card (registry links) — the .btn component does the styling. */
+.card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-start: var(--space-4);
+}
+
+/* "All four engines" link under the three registry cards → the hub page. */
+/* The ask a reader can forward to their own vendor. A quote, not a card: the words are
+   theirs to send, and the card treatment would read as one more thing we are selling.
+   Logical properties throughout — the accent rail has to sit on the right in Arabic. */
+.vendor-ask {
+  max-width: 68ch;
+  margin: var(--space-6) auto 0;
+  text-align: start;
+}
+.vendor-ask__lead {
+  margin: 0 0 var(--space-3);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+/* The glyph carries the same accent as the quote's rail, so the two read as one unit. It runs
+   slightly above the text size — at a flat 1em next to this small lead it read as a smudge. */
+.vendor-ask__lead .icon {
+  width: 1.15em; height: 1.15em;
+  color: var(--primary);
+  margin-inline-end: 0.3em;
+}
+.vendor-ask__quote {
+  margin: 0 0 var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-inline-start: 3px solid var(--primary);
+  background: var(--bg-soft);
+  border-radius: var(--radius-xs);
+  color: var(--text-main);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+}
+.vendor-ask .copy-btn { margin-inline-start: auto; display: flex; }
+
+.opensource__all {
+  margin-block-start: var(--space-5);
+  text-align: center;
+}
+
+/* =========================
+   SYNTAX DEMO
+   ========================= */
+
+.syntax__wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .syntax__wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.syntax__block {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.syntax__label {
+  display: block;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-subtle);
+  border-block-end: 1px solid var(--code-border);
+}
+
+.syntax__code {
+  display: block;
+  padding: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  color: var(--text-main);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.syntax__code .s-enum { color: var(--blue-300); }
+.syntax__code .s-perm { color: var(--gold-300); }
+.syntax__code .s-var  { color: var(--magenta-300); }
+.syntax__code .s-cond { color: var(--magenta-300); font-weight: 600; }
+.syntax__code .s-dir  { color: var(--text-subtle); }
+.syntax__code .s-conf { color: var(--text-subtle); font-style: italic; }
+
+:root[data-theme="light"] .syntax__code .s-enum { color: var(--blue-700); }
+:root[data-theme="light"] .syntax__code .s-perm { color: var(--gold-900); }
+:root[data-theme="light"] .syntax__code .s-var  { color: var(--magenta-700); }
+:root[data-theme="light"] .syntax__code .s-cond { color: var(--magenta-700); }
+
+/* =========================
+   HOW IT WORKS
+   ========================= */
+
+.steps__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  counter-reset: step;
+}
+
+@media (min-width: 768px) {
+  .steps__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.step {
+  text-align: center;
+  counter-increment: step;
+}
+
+.step__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  margin-block-end: var(--space-3);
+}
+
+.step__title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  margin: 0 0 var(--space-2);
+}
+
+.step__text {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Every step links out now (the AI workflow guide, the playground, Studio). The column layout
+   plus margin-top:auto pins the buttons to the bottom of the row so they line up even though
+   the step texts differ in length.
+   [TRAP] .step centres its content with text-align, which stops working on the number the
+   moment .step becomes a flex container — a flex item is not inline content. Hence the
+   explicit margin-inline on the circle; without it the numbers sit hard left. */
+.step {
+  display: flex;
+  flex-direction: column;
+}
+
+.step .step__number {
+  margin-inline: auto;
+}
+
+.step__link {
+  margin: var(--space-3) 0 0;
+}
+
+@media (min-width: 768px) {
+  .step__link { margin-block-start: auto; padding-block-start: var(--space-3); }
+}
+
+/* =========================
+   PLUGIN CTA
+   ========================= */
+
+.plugin__content {
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.plugin__content .text-lead {
+  margin-block-end: var(--space-4);
+}
+
+.plugin__badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-block-end: var(--space-5);
+}
+
+/* =========================
+   OPEN SOURCE
+   ========================= */
+
+.opensource__content {
+  text-align: center;
+  max-width: 540px;
+  margin-inline: auto;
+}
+
+.opensource__content .text-lead {
+  margin-block-end: var(--space-4);
+}
+
+/* =========================
+   Language Dropdown
+   ========================= */
+
+.lang-dd { position: relative; }
+.lang-dd__btn {
+  display: inline-flex; align-items: center; gap: .3em;
+  font-size: var(--fs-sm); font-family: inherit;
+  color: var(--text-muted); background: transparent;
+  border: 1px solid var(--border-subtle); border-radius: 2rem;
+  padding: .2em .6em; cursor: pointer; transition: all var(--transition-fast);
+}
+.lang-dd__btn:hover { color: var(--text-main); border-color: var(--accent); }
+.lang-dd__menu {
+  position: absolute; inset-inline-end: 0; top: calc(100% + .35rem);
+  min-width: 7rem; background: var(--panel);
+  border: 1px solid var(--border-subtle); border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,.3); padding: .25rem; z-index: 10;
+  opacity: 0; pointer-events: none; transform: translateY(-4px);
+  transition: opacity .15s, transform .15s;
+}
+.lang-dd__menu.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.lang-dd__flag { display: inline-block; width: 1.2em; height: .8em; vertical-align: -.05em; border-radius: 2px; overflow: hidden; flex-shrink: 0; }
+.lang-dd__flag svg { display: block; width: 100%; height: 100%; }
+.lang-dd__item {
+  display: flex; align-items: center; gap: .4em;
+  padding: .35em .6em; font-size: var(--fs-sm);
+  color: var(--text-main); border-radius: calc(var(--radius) / 2);
+  text-decoration: none; transition: background var(--transition-fast);
+}
+.lang-dd__item:hover { background: var(--bg-soft); text-decoration: none; }
+.lang-dd__item.is-active { color: var(--accent); font-weight: 600; }
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  border-block-start: 1px solid var(--border-subtle);
+  padding-block: var(--space-5);
+  /* A light static hive — Hexagons.pattern() from hexagons-lite, baked at authoring
+     time (~460 bytes of inline SVG, zero runtime JS). Regenerate after a brand/theme
+     change: window-shim node, H.pattern({ size: 26, theme, opacity: dark .10 / light .07 }). */
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2226%22%20height%3D%2245.033%22%20viewBox%3D%220%200%2026%2045.033%22%3E%3Cpath%20d%3D%22M13%200L26%207.506M26%207.506L26%2022.517M26%2022.517L13%2030.022M13%2030.022L0%2022.517M0%2022.517L0%207.506M0%207.506L13%200M13%2030.022L13%2045.033%22%20fill%3D%22none%22%20stroke%3D%22%230094d3%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%3C%2Fsvg%3E");
+}
+
+html[data-theme='light'] .footer {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2226%22%20height%3D%2245.033%22%20viewBox%3D%220%200%2026%2045.033%22%3E%3Cpath%20d%3D%22M13%200L26%207.506M26%207.506L26%2022.517M26%2022.517L13%2030.022M13%2030.022L0%2022.517M0%2022.517L0%207.506M0%207.506L13%200M13%2030.022L13%2045.033%22%20fill%3D%22none%22%20stroke%3D%22%230084bd%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.07%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer__copy {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* The cube mark before the copyright — the second brand logo (the first, the
+   ribbon, lives in the nav). Sprite symbol carries its own face colours; the
+   inherited currentColor never reaches its paths. */
+.footer__brand {
+  margin-inline-end: 0.45em;
+  vertical-align: -0.3em;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-3);
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.footer__links a {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer__links a:hover { color: var(--text-main); }
+
+@media (min-width: 768px) {
+  .footer__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-3);
+  }
+  .footer__copy {
+    order: -1;
+    margin-inline-end: auto;
+  }
+}
+
+/* =========================
+   About SEO (details/summary)
+   ========================= */
+
+.about-seo { padding-block-end: var(--space-5); }
+
+.about-seo details {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.about-seo summary {
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 600;
+  font-size: var(--fs-lg);
+  color: var(--text-main);
+}
+
+/* Real heading inside the summary (SEO); font: inherit keeps the summary's own type */
+.about-seo__title { font: inherit; margin: 0; }
+
+.about-seo summary::marker,
+.about-seo summary::-webkit-details-marker { display: none; }
+
+.about-seo summary::before {
+  content: '';
+  border: 5px solid transparent;
+  border-left: 7px solid var(--text-muted);
+  transition: transform .2s;
+}
+
+.about-seo details[open] summary::before { transform: rotate(90deg); }
+
+.about-seo__body {
+  padding: 0 var(--space-4) var(--space-4);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+}
+
+/* The branded honeycomb AROUND the About panel (owner call 2026-08-09): the crystal
+   fills the section background while the panel itself stays an opaque reading surface
+   on top. Assembled in logo colours when the <details> opens, mirrored back out on
+   close (hexagons-lite `fill` + animateOut — see src/client/about-bg.ts). */
+.about-seo {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-6);
+}
+
+.about-seo__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  /* Full strength on purpose: the panel above is an opaque reading surface, the
+     crystal frames it. At .5 the light-theme facets dissolved into the white page
+     (verified in the browser) — muting lives in the palette, not in an overlay. */
+  opacity: 1;
+  pointer-events: none;
+}
+
+.about-seo .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-seo__body p { margin-bottom: var(--space-3); }
+.about-seo__body p:last-child { margin-bottom: 0; }
+
+/* =========================
+   Smooth scroll & motion
+   ========================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   SITE SEARCH  (EN + RU only — see searchHtml() in layout.ts)
+
+   One component, two presentations, as in the 301-ui reference: a full-screen
+   sheet by default, an inline field with a dropdown from 1024px up. Mobile-first
+   like the rest of this file, so the sheet is the base state and the desktop
+   dropdown lives in the min-width query at the bottom.
+   ============================================================ */
+
+.search { position: relative; display: flex; align-items: center; }
+
+/* Magnify button. Borrows .theme-toggle for its box so the nav keeps one icon-button
+   shape rather than gaining a third. */
+.search__field { display: none; }
+.search__close { display: none; }
+.search__kbd { display: none; }
+
+.search__field {
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--control-min-height);
+  padding-inline: var(--space-2);
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--r-field);
+}
+.search__field:focus-within { border-color: var(--input-border-focus); }
+.search__field-icon { color: var(--text-muted); flex: none; }
+
+.search__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: var(--fs-sm);
+  outline: none;
+}
+.search__input::placeholder { color: var(--text-subtle); }
+/* The UA clear affordance duplicates our close button. */
+.search__input::-webkit-search-cancel-button { display: none; }
+
+.search__kbd {
+  flex: none;
+  padding: .1em .35em;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  color: var(--text-subtle);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+}
+
+.search__close {
+  flex: none;
+  padding: .15em;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.search__palette {
+  background: var(--panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+}
+.search__palette[hidden] { display: none; }
+
+.search__results { overflow-y: auto; padding: var(--space-1); }
+
+.search__empty {
+  margin: 0;
+  padding: var(--space-3);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+.search__result {
+  display: block;
+  padding: var(--space-2);
+  border-radius: var(--radius-xs);
+  color: inherit;
+  text-decoration: none;
+}
+.search__result:hover,
+.search__result.is-active { background: var(--accent-soft); }
+
+.search__result-title {
+  display: block;
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+}
+.search__result-excerpt {
+  /* Clamped to two lines: Pagefind returns a paragraph-sized excerpt, and at full
+     height six results stop being scannable. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-block-start: .15em;
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-body);
+}
+.search__result-excerpt mark {
+  background: var(--accent-soft);
+  color: var(--text);
+  border-radius: 2px;
+}
+
+/* --- Mobile sheet ------------------------------------------------------- */
+/* The wrapper is re-parented into <body> by the client before this applies: .nav is
+   sticky with a backdrop-filter, which makes it the containing block for position:fixed
+   and would clip the sheet to the nav box. See src/client/search.ts. */
+body.search-open-mobile { overflow: hidden; }
+
+body.search-open-mobile .search {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--bg);
+}
+body.search-open-mobile .search__toggle { display: none; }
+body.search-open-mobile .search__field { display: flex; }
+body.search-open-mobile .search__close { display: inline-flex; }
+body.search-open-mobile .search__palette {
+  flex: 1 1 auto;
+  min-height: 0;
+  border: 0;
+  background: transparent;
+}
+body.search-open-mobile .search__results { height: 100%; max-height: none; }
+
+/* --- Desktop: inline field + dropdown ----------------------------------- */
+@media (min-width: 1024px) {
+  .search__toggle { display: none; }
+  .search__field { display: flex; width: 13rem; }
+  .search__kbd { display: inline-block; }
+
+  .search__palette {
+    position: absolute;
+    inset-inline-end: 0;
+    top: calc(100% + .35rem);
+    width: min(26rem, 80vw);
+    z-index: var(--z-dropdown);
+    box-shadow: var(--shadow-lg);
+  }
+  .search__results { max-height: 60vh; }
+}

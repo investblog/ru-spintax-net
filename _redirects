@@ -1,0 +1,31 @@
+# The Sublime grammar is no longer served from here — it lived at this URL as a hand-synced
+# copy of investblog/sublime-spintax and would eventually drift from the published package.
+/downloads/Spintax.sublime-syntax  https://packagecontrol.io/packages/Spintax  301
+
+# /gtw/ became /spintax-editor/ on 2026-07-30 (see .agents/plans/active/spintax-editor-page.md).
+# The old slug carries legacy "GTW" search intent — 301, never delete. Explicit per-language
+# lines rather than a placeholder, matching the per-page style used in _headers.
+/gtw/ /spintax-editor/ 301
+/ru/gtw/ /ru/spintax-editor/ 301
+/es/gtw/ /es/spintax-editor/ 301
+/fr/gtw/ /fr/spintax-editor/ 301
+/de/gtw/ /de/spintax-editor/ 301
+/it/gtw/ /it/spintax-editor/ 301
+/pt/gtw/ /pt/spintax-editor/ 301
+/nl/gtw/ /nl/spintax-editor/ 301
+/ar/gtw/ /ar/spintax-editor/ 301
+/zh/gtw/ /zh/spintax-editor/ 301
+/ja/gtw/ /ja/spintax-editor/ 301
+/ko/gtw/ /ko/spintax-editor/ 301
+/tr/gtw/ /tr/spintax-editor/ 301
+/uk/gtw/ /uk/spintax-editor/ 301
+/be/gtw/ /be/spintax-editor/ 301
+/sr/gtw/ /sr/spintax-editor/ 301
+# Slashless variants used to be normalized onto /gtw/ by Pages itself — that normalization
+# only exists while the asset does, so the rename must cover them explicitly. The placeholder
+# rule takes the per-language slashless form (a dynamic redirect). No .html rules: the page
+# was always gtw/index.html, so /gtw.html never resolved (and Pages drops .html sources).
+/gtw /spintax-editor/ 301
+/:lang/gtw /:lang/spintax-editor/ 301
+# The Markdown mirror moved with the page.
+/gtw.md /spintax-editor.md 301

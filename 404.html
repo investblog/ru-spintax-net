@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Spintax</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/theme.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin: 0 0 0.5rem; }
+    p { color: var(--text-muted); margin: 0 0 1.5rem; }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.4em 1em;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.15s;
+    }
+    a:hover { border-color: var(--border-strong); background: var(--panel); }
+    /* The honeycomb backdrop (hexagons-lite, canvas). Behind everything, muted so the
+       message stays the subject; pointer-events pass through to the drift's pointer
+       parallax, which listens on the window anyway. */
+    .nf-bg { position: fixed; inset: 0; z-index: 0; opacity: .55; }
+    .nf-content { position: relative; z-index: 1; }
+  </style>
+  <script src="/js/theme-init.js"></script>
+</head>
+<body>
+  <div class="nf-bg" aria-hidden="true"></div>
+  <div class="nf-content">
+    <h1>404</h1>
+    <p>Page not found.</p>
+    <a href="/">&larr; Back to Spintax</a>
+  </div>
+  <script type="module" src="/js/notfound-bg.js?v=2bbaea8bc7" data-hexlib="/js/hexlib.js?v=a0b18458d0"></script>
+</body>
+</html>

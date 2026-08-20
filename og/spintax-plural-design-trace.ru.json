@@ -1,0 +1,11 @@
+{
+  "slug": "spintax-plural-design-trace",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Дизайн-трейс плюрального примитива: реал-data cost analysis на Generator (generator.ink), решения, залоченные до кода, реконциляция при расхождении working-имплементации с абстрактным спеком, и уроки.",
+  "bytes": 113655,
+  "sha256": "ba35cddde009e274"
+}

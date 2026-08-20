@@ -1,0 +1,11 @@
+{
+  "slug": "spintax-editor",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Где писать и проверять spintax: Spintax Studio — бесплатный офлайн-редактор для Windows, который рендерит и выгружает варианты; подсветка синтаксиса для VS Code и Sublime Text; и песочница в браузере, которая проверит шаблон и тут же его развернёт.",
+  "bytes": 108037,
+  "sha256": "9f9424b45f29ebd3"
+}

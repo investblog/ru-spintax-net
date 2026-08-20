@@ -1,0 +1,11 @@
+{
+  "slug": "spintax-for-php",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Framework-agnostic spintax-движок для PHP 8.0+. Перечисления, перестановки, переменные, условия, согласование с числом, include и пост-обработка. Ноль зависимостей, MIT, на Packagist как spintax/core.",
+  "bytes": 103972,
+  "sha256": "5d5c1aac3a516d55"
+}

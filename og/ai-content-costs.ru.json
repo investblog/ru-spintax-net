@@ -1,0 +1,11 @@
+{
+  "slug": "ai-content-costs",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Реальная цена одной статьи у Claude, GPT, Gemini, Grok, DeepSeek, Qwen, Kimi и Mistral в августе 2026. Prompt-кэш, batch-скидки и момент, когда платить за каждую генерацию перестаёт иметь смысл.",
+  "bytes": 101552,
+  "sha256": "36e7b0330fb981fd"
+}

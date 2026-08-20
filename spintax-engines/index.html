@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Движки spintax — один синтаксис для JavaScript, PHP, Python и Pascal</title>
+  <meta name="description" content="Четыре независимых open-source движка spintax, сверенных по одному общему эталонному корпусу: @spintax/core на npm, spintax/core на Packagist, spintax-core на PyPI и движок на Free Pascal. Ноль зависимостей, MIT, один и тот же синтаксис везде.">
+
+  <meta property="og:type" content="article">
+  <meta property="article:modified_time" content="2026-08-17">
+  <meta property="og:site_name" content="Spintax">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://ru.spintax.net/spintax-engines/">
+  <meta property="og:title" content="Движки spintax — один синтаксис для JavaScript, PHP, Python и Pascal">
+  <meta property="og:description" content="Четыре независимых open-source движка spintax, сверенных по одному общему эталонному корпусу: @spintax/core на npm, spintax/core на Packagist, spintax-core на PyPI и движок на Free Pascal. Ноль зависимостей, MIT, один и тот же синтаксис везде.">
+  <meta property="og:image" content="https://ru.spintax.net/og/spintax-engines.ru.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Движки spintax — один синтаксис для JavaScript, PHP, Python и Pascal">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://ru.spintax.net/og/spintax-engines.ru.png">
+  <meta name="twitter:image:alt" content="Движки spintax — один синтаксис для JavaScript, PHP, Python и Pascal">
+  <meta name="yandex-verification" content="18668637e0f0e946">
+
+  <link rel="canonical" href="https://ru.spintax.net/spintax-engines/">
+  <link rel="alternate" type="application/rss+xml" title="Spintax — статьи" href="/rss.xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="alternate" hreflang="x-default" href="https://spintax.net/spintax-engines/">
+  <link rel="alternate" hreflang="en" href="https://spintax.net/spintax-engines/">
+  <link rel="alternate" hreflang="ru" href="https://ru.spintax.net/spintax-engines/">
+  <link rel="alternate" hreflang="zh" href="https://spintax.net/zh/spintax-engines/">
+
+  <link rel="stylesheet" href="/css/theme.css?v=fae17d409f">
+  <link rel="stylesheet" href="/css/landing.css?v=a8db78abca">
+  <link rel="stylesheet" href="/css/docs.css?v=60c312ed92">
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://spintax.net/#org","name":"Spintax","url":"https://spintax.net/","logo":"https://spintax.net/logo.svg","sameAs":["https://github.com/investblog/spintax","https://www.npmjs.com/package/@spintax/core","https://t.me/spintaxseo"]},{"@type":"ItemList","name":"Main navigation","itemListElement":[{"@type":"SiteNavigationElement","position":1,"name":"Что такое Spintax?","url":"https://ru.spintax.net/what-is-spintax/"},{"@type":"SiteNavigationElement","position":2,"name":"Справочник синтаксиса","url":"https://ru.spintax.net/docs/syntax"},{"@type":"SiteNavigationElement","position":3,"name":"Вложенный Spintax","url":"https://ru.spintax.net/docs/nested-spintax/"},{"@type":"SiteNavigationElement","position":4,"name":"Spintax для n8n","url":"https://ru.spintax.net/spintax-for-n8n/"},{"@type":"SiteNavigationElement","position":5,"name":"Обратный порядок написания","url":"https://ru.spintax.net/docs/authoring-mindset/"},{"@type":"SiteNavigationElement","position":6,"name":"Переменные и переиспользование","url":"https://ru.spintax.net/docs/variables/"},{"@type":"SiteNavigationElement","position":7,"name":"Permutations на практике","url":"https://ru.spintax.net/docs/permutations/"},{"@type":"SiteNavigationElement","position":8,"name":"Грамматически безопасный spintax","url":"https://ru.spintax.net/docs/grammar-safe-spintax/"},{"@type":"SiteNavigationElement","position":9,"name":"Композиция шаблонов","url":"https://ru.spintax.net/docs/template-composition/"},{"@type":"SiteNavigationElement","position":10,"name":"Условный spintax","url":"https://ru.spintax.net/docs/conditional-spintax/"},{"@type":"SiteNavigationElement","position":11,"name":"Согласование с числом","url":"https://ru.spintax.net/docs/plural-spintax/"},{"@type":"SiteNavigationElement","position":12,"name":"Spintax для JavaScript","url":"https://ru.spintax.net/spintax-for-javascript/"},{"@type":"SiteNavigationElement","position":13,"name":"Spintax для PHP","url":"https://ru.spintax.net/spintax-for-php/"},{"@type":"SiteNavigationElement","position":14,"name":"Движки spintax — вся семья","url":"https://ru.spintax.net/spintax-engines/"},{"@type":"SiteNavigationElement","position":15,"name":"Песочница Spintax","url":"https://ru.spintax.net/play/"},{"@type":"SiteNavigationElement","position":16,"name":"Редакторы","url":"https://ru.spintax.net/spintax-editor/"},{"@type":"SiteNavigationElement","position":17,"name":"Spintax на примере","url":"https://ru.spintax.net/examples/"},{"@type":"SiteNavigationElement","position":18,"name":"Пишем шаблоны с ИИ","url":"https://ru.spintax.net/ai-spintax-templates/"},{"@type":"SiteNavigationElement","position":19,"name":"MCP-сервер spintax","url":"https://ru.spintax.net/spintax-mcp/"},{"@type":"SiteNavigationElement","position":20,"name":"Spintax для холодных рассылок","url":"https://ru.spintax.net/spintax-for-cold-email/"},{"@type":"SiteNavigationElement","position":21,"name":"Сколько реально стоит AI-контент","url":"https://ru.spintax.net/ai-content-costs/"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://ru.spintax.net/"},{"@type":"ListItem","position":2,"name":"Движки spintax"}]},{"@type":"TechArticle","headline":"Движки spintax — один синтаксис для JavaScript, PHP, Python и Pascal","description":"Четыре независимых open-source движка spintax, сверенных по одному общему эталонному корпусу: @spintax/core на npm, spintax/core на Packagist, spintax-core на PyPI и движок на Free Pascal. Ноль зависимостей, MIT, один и тот же синтаксис везде.","url":"https://ru.spintax.net/spintax-engines/","mainEntityOfPage":"https://ru.spintax.net/spintax-engines/","inLanguage":"ru","dateModified":"2026-08-17","image":"https://ru.spintax.net/og-image.png","author":{"@id":"https://spintax.net/#org"},"publisher":{"@id":"https://spintax.net/#org"}},{"@type":"SoftwareSourceCode","name":"@spintax/core","description":"Zero-dependency spintax engine for JavaScript and TypeScript: parse, render, validate, extract, and neutralize spintax templates.","codeRepository":"https://github.com/investblog/spintax-js","programmingLanguage":"TypeScript","runtimePlatform":["Node.js","Cloudflare Workers","Browser"],"license":"https://opensource.org/licenses/MIT","inLanguage":"ru","author":{"@id":"https://spintax.net/#org"}},{"@type":"SoftwareSourceCode","name":"spintax/core","description":"Zero-dependency spintax engine for PHP 8.0+: enumerations, permutations, variables, conditionals, plural agreement, includes, and post-processing.","codeRepository":"https://github.com/investblog/spintax-php","programmingLanguage":"PHP","runtimePlatform":["PHP 8.0+"],"license":"https://opensource.org/licenses/MIT","inLanguage":"ru","author":{"@id":"https://spintax.net/#org"}},{"@type":"SoftwareSourceCode","name":"spintax-core","description":"Zero-dependency spintax engine for Python 3.10+: enumerations, permutations, variables, conditionals, plural agreement, includes, and post-processing.","codeRepository":"https://github.com/investblog/spintax-py","programmingLanguage":"Python","runtimePlatform":["Python 3.10+"],"license":"https://opensource.org/licenses/MIT","inLanguage":"ru","author":{"@id":"https://spintax.net/#org"}},{"@type":"SoftwareSourceCode","name":"spintax-win","description":"Zero-dependency spintax engine in Object Pascal (Free Pascal 3.2.2+): enumerations, permutations, variables, conditionals, plural agreement, includes, and post-processing.","codeRepository":"https://github.com/investblog/spintax-win","programmingLanguage":"Object Pascal","runtimePlatform":["Free Pascal 3.2.2+"],"license":"https://opensource.org/licenses/MIT","inLanguage":"ru","author":{"@id":"https://spintax.net/#org"}}]}</script>
+
+  <script src="/js/main.js?v=fa764c8fc2" defer></script>
+  <script type="module" src="/js/webmcp.js?v=ca166c680e" data-engine="/js/engine.js?v=3baaa69c82"></script>
+  <script type="module" src="/js/search.js?v=9cdc1f4e57"></script>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" hidden>
+  <symbol id="i-mono-alert-circle-outline" viewBox="0 0 24 24" fill="currentColor"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm1-5C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"/></symbol>
+  <symbol id="i-mono-arrow-left" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></symbol>
+  <symbol id="i-mono-call-split" viewBox="0 0 24 24"><path d="m14 4 2.29 2.29-2.88 2.88 1.42 1.42 2.88-2.88L20 10V4M10 4H4v6l2.29-2.29 4.71 4.7V20h2v-8.41l-5.29-5.3"/></symbol>
+  <symbol id="i-mono-chat-question-outline" viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.2 1.1 4.2 2.8 5.5 0 .6-.4 2.2-2.8 4.5 2.4-.1 4.6-1 6.5-2.5 1.1.3 2.3.5 3.5.5 5.5 0 10-3.6 10-8s-4.5-8-10-8m0 14c-4.4 0-8-2.7-8-6s3.6-6 8-6 8 2.7 8 6-3.6 6-8 6m.2-10.5c-.9 0-1.6.2-2.1.5-.6.4-.9 1-.8 1.7h2q0-.45.3-.6c.2-.1.4-.2.7-.2s.6.1.8.3.3.4.3.7-.1.5-.2.7c-.2.2-.4.4-.6.5-.5.3-.9.6-1.1.8-.4.3-.5.6-.5 1.1h2c0-.3.1-.5.1-.7.1-.2.3-.3.5-.5.5-.2.8-.5 1.1-.9s.4-.8.4-1.2c0-.7-.3-1.3-.8-1.7-.4-.3-1.2-.5-2.1-.5M11 13v2h2v-2z"/></symbol>
+  <symbol id="i-mono-chevron-right" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></symbol>
+  <symbol id="i-mono-clock-outline" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></symbol>
+  <symbol id="i-mono-close" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+  <symbol id="i-mono-code-braces" viewBox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"/></symbol>
+  <symbol id="i-mono-content-copy" viewBox="0 0 24 24" fill="currentColor"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></symbol>
+  <symbol id="i-mono-currency-usd" viewBox="0 0 24 24"><path d="M7 15h2c0 1.08 1.37 2 3 2s3-.92 3-2c0-1.1-1.04-1.5-3.24-2.03C9.64 12.44 7 11.78 7 9c0-1.79 1.47-3.31 3.5-3.82V3h3v2.18C15.53 5.69 17 7.21 17 9h-2c0-1.08-1.37-2-3-2s-3 .92-3 2c0 1.1 1.04 1.5 3.24 2.03C14.36 11.56 17 12.22 17 15c0 1.79-1.47 3.31-3.5 3.82V21h-3v-2.18C8.47 18.31 7 16.79 7 15"/></symbol>
+  <symbol id="i-mono-database" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></symbol>
+  <symbol id="i-mono-email-outline" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></symbol>
+  <symbol id="i-mono-file-document-outline" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></symbol>
+  <symbol id="i-mono-flash" viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></symbol>
+  <symbol id="i-mono-format-list-numbered" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></symbol>
+  <symbol id="i-mono-github" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></symbol>
+  <symbol id="i-mono-help-circle-outline" viewBox="0 0 24 24"><path d="M11 18h2v-2h-2zm1-16A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14a4 4 0 0 0-4 4h2a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5a4 4 0 0 0-4-4"/></symbol>
+  <symbol id="i-mono-home-outline" viewBox="0 0 24 24" fill="currentColor"><path d="m12 5.09 5 4V18h-2v-6H9v6H7V9.09zM12 3 2 12h3v8h6v-6h2v6h6v-8h3z"/></symbol>
+  <symbol id="i-mono-language-javascript" viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03z"/></symbol>
+  <symbol id="i-mono-language-php-box" viewBox="0 0 24 24"><path d="M3 3h18v18H3zm5.22 8c.39 0 .66.07.79.23.13.14.16.4.09.74-.07.38-.21.62-.42.78-.2.16-.51.24-.92.24h-.63L7.51 11zM5.7 15h1.04l.25-1.26h.88q.585 0 .96-.12.375-.135.69-.42c.17-.16.31-.33.42-.53.11-.18.18-.4.22-.63.12-.56.04-1-.24-1.31-.28-.32-.72-.47-1.33-.47H6.6zm5.22-6-.9 4.74h1.03l.51-2.72h.83c.26 0 .43.05.51.13.08.09.1.25.05.48l-.4 2.11h1.05l.43-2.21c.09-.45.01-.77-.2-.98-.22-.2-.61-.29-1.17-.29h-.92L11.99 9zm5.43 2c.39 0 .65.07.79.23.13.14.16.4.09.74-.07.38-.21.62-.42.78q-.3.24-.93.24h-.62l.38-1.99zm-2.52 4h1.04l.24-1.26H16q.585 0 .96-.12.375-.135.69-.42c.17-.16.31-.33.42-.53.1-.18.18-.4.23-.63.1-.56.03-1-.26-1.31-.27-.32-.72-.47-1.32-.47h-1.99z"/></symbol>
+  <symbol id="i-mono-language-python-box" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3h18v18H3zm14.14 5.76a2.06 2.06 0 0 1 2.06 2.06v2.72a2.06 2.06 0 0 1-2.06 2.06H12c0 .28.23.69.51.69h3.09v1.21a2.06 2.06 0 0 1-2.06 2.06h-3.08A2.06 2.06 0 0 1 8.4 17.5v-2.7c0-1.14.92-2.05 2.06-2.05h3.78c1.14 0 2.05-.92 2.05-2.06V8.76zm-3.08 8.49c-.29 0-.52.21-.52.64 0 .42.23.51.52.51a.51.51 0 0 0 .51-.51c0-.43-.23-.64-.51-.64m-7.2-1.29c-1.14 0-2.06-.92-2.06-2.06v-2.72c0-1.14.92-2.06 2.06-2.06H12c0-.28-.23-.69-.51-.69H8.4V7.22c0-1.14.92-2.06 2.06-2.06h3.08c1.14 0 2.06.92 2.06 2.06v2.7c0 1.14-.92 2.05-2.06 2.05H9.76c-1.14 0-2.05.92-2.05 2.06v1.93zm3.08-8.49c.29 0 .52-.21.52-.64 0-.42-.23-.51-.52-.51-.28 0-.51.09-.51.51 0 .43.23.64.51.64"/></symbol>
+  <symbol id="i-mono-layers" viewBox="0 0 24 24"><path d="m12 16 7.36-5.73L21 9l-9-7-9 7 1.63 1.27M12 18.54l-7.38-5.73L3 14.07l9 7 9-7-1.63-1.27z"/></symbol>
+  <symbol id="i-mono-link-variant" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></symbol>
+  <symbol id="i-mono-magnify" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></symbol>
+  <symbol id="i-mono-menu" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></symbol>
+  <symbol id="i-mono-npm" viewBox="0 0 24 24"><path d="M4 10v4h2v-3h1v3h1v-4zm5 0v5h2v-1h2v-4zm3 1v2h-1v-2zm2-1v4h2v-3h1v3h1v-3h1v3h1v-4zM3 9h18v6h-9v1H8v-1H3z"/></symbol>
+  <symbol id="i-mono-numeric" viewBox="0 0 24 24"><path d="M4 17V9H2V7h4v10zm18-2a2 2 0 0 1-2 2h-4v-2h4v-2h-2v-2h2V9h-4V7h4a2 2 0 0 1 2 2v1.5a1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1 1.5 1.5zm-8 0v2H8v-4a2 2 0 0 1 2-2h2V9H8V7h4a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2z"/></symbol>
+  <symbol id="i-mono-package-variant-closed" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35z"/></symbol>
+  <symbol id="i-mono-pencil-outline" viewBox="0 0 24 24"><path d="m14.06 9 .94.94L5.92 19H5v-.92zm3.6-6c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z"/></symbol>
+  <symbol id="i-mono-play-circle-outline" viewBox="0 0 24 24" fill="currentColor"><path d="M12 20c4.4 0 8-3.6 8-8s-3.6-8-8-8-8 3.6-8 8 3.6 8 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m-2 14.5v-9l6 4.5z"/></symbol>
+  <symbol id="i-mono-plus" viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></symbol>
+  <symbol id="i-mono-puzzle-outline" viewBox="0 0 24 24"><path d="M22 13.5c0 1.76-1.3 3.22-3 3.46V20a2 2 0 0 1-2 2h-3.8v-.3a2.7 2.7 0 0 0-2.7-2.7c-1.5 0-2.7 1.21-2.7 2.7v.3H4a2 2 0 0 1-2-2v-3.8h.3C3.79 16.2 5 15 5 13.5s-1.21-2.7-2.7-2.7H2V7a2 2 0 0 1 2-2h3.04c.24-1.7 1.7-3 3.46-3s3.22 1.3 3.46 3H17a2 2 0 0 1 2 2v3.04c1.7.24 3 1.7 3 3.46M17 15h1.5a1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5H17V7h-5V5.5A1.5 1.5 0 0 0 10.5 4 1.5 1.5 0 0 0 9 5.5V7H4v2.12c1.76.68 3 2.38 3 4.38s-1.25 3.7-3 4.38V20h2.12a4.7 4.7 0 0 1 4.38-3c2 0 3.7 1.25 4.38 3H17z"/></symbol>
+  <symbol id="i-mono-robot-outline" viewBox="0 0 24 24"><path d="M17.5 15.5c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2m-9-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2z"/></symbol>
+  <symbol id="i-mono-rss-box" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2.5 12A1.5 1.5 0 0 0 6 16.5 1.5 1.5 0 0 0 7.5 18 1.5 1.5 0 0 0 9 16.5 1.5 1.5 0 0 0 7.5 15M6 10v2a6 6 0 0 1 6 6h2a8 8 0 0 0-8-8m0-4v2a10 10 0 0 1 10 10h2A12 12 0 0 0 6 6"/></symbol>
+  <symbol id="i-mono-shuffle-variant" viewBox="0 0 24 24"><path d="m17 3 5.25 4.5L17 12l5.25 4.5L17 21v-3h-2.74l-2.82-2.82 2.12-2.12L15.5 15H17V9h-1.5l-9 9H2v-3h3.26l9-9H17zM2 6h4.5l2.82 2.82-2.12 2.12L5.26 9H2z"/></symbol>
+  <symbol id="i-mono-sitemap" viewBox="0 0 24 24" fill="currentColor"><path d="M9 2v6h2v3H5a2 2 0 0 0-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6h-2v-3a2 2 0 0 0-2-2h-6V8h2V2z"/></symbol>
+  <symbol id="i-mono-spellcheck" viewBox="0 0 24 24"><path d="m21.59 11.59-8.09 8.09L9.83 16l-1.41 1.41 5.08 5.09L23 13M6.43 11 8.5 5.5l2.07 5.5m1.88 5h2.09L9.43 3H7.57L2.46 16h2.09l1.12-3h5.64z"/></symbol>
+  <symbol id="i-mono-sunny" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></symbol>
+  <symbol id="i-mono-swap-horizontal" viewBox="0 0 24 24"><path d="m21 9-4-4v3h-7v2h7v3M7 11l-4 4 4 4v-3h7v-2H7z"/></symbol>
+  <symbol id="i-mono-tag" viewBox="0 0 24 24"><path d="M5.5 7A1.5 1.5 0 0 1 4 5.5 1.5 1.5 0 0 1 5.5 4 1.5 1.5 0 0 1 7 5.5 1.5 1.5 0 0 1 5.5 7m15.91 4.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.11 0-2 .89-2 2v7c0 .55.22 1.05.59 1.41l8.99 9c.37.36.87.59 1.42.59s1.05-.23 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.56-.23-1.06-.59-1.42"/></symbol>
+  <symbol id="i-mono-telegram" viewBox="0 0 24 24"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.5.5 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024q-.159.037-5.061 3.345-.72.495-1.302.48c-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789q.04-.324.893-.663 5.247-2.286 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635"/></symbol>
+  <symbol id="i-mono-wordpress" viewBox="0 0 24 24"><path d="M3.42 12c0-1.24.27-2.42.74-3.5l4.1 11.22A8.56 8.56 0 0 1 3.42 12m14.37-.43c0 .73-.29 1.58-.65 2.77l-.86 2.86-3.1-9.2.98-.1c.47-.06.41-.74-.05-.71 0 0-1.39.11-2.29.11l-2.26-.11c-.46-.03-.51.68-.06.71l.91.1 1.34 3.64-1.88 5.63L6.74 8l.99-.1c.46-.06.4-.74-.06-.71 0 0-1.39.11-2.29.11l-.55-.01C6.37 4.96 9 3.42 12 3.42c2.23 0 4.27.86 5.79 2.25h-.11c-.84 0-1.44.73-1.44 1.52 0 .71.41 1.31.84 2.01.33.57.71 1.3.71 2.37m-5.64 1.18 2.64 7.22.06.12c-.89.32-1.85.49-2.85.49-.84 0-1.65-.12-2.42-.35zm7.38-4.87A8.55 8.55 0 0 1 20.58 12c0 3.16-1.72 5.93-4.27 7.41l2.62-7.57c.49-1.22.66-2.2.66-3.07zM12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 19.54c5.26 0 9.54-4.28 9.54-9.54S17.26 2.46 12 2.46 2.46 6.74 2.46 12s4.28 9.54 9.54 9.54"/></symbol>
+  <symbol id="i-brand-301" viewBox="0 0 26 26"><path fill="currentColor" d="M13.295 18.57c-.013 1.026-.074 2.047-.438 3.026-.681 1.828-2.003 2.903-3.893 3.284a8.3 8.3 0 0 1-1.56.146c-2.42.024-4.839.025-7.259.034H0v-5.454h.214c2.22.01 4.442.017 6.662.003a4 4 0 0 0 1.058-.16 1.66 1.66 0 0 0 1.22-1.546c.034-.746.052-1.494.031-2.24-.028-1.03-.769-1.766-1.8-1.803-.854-.03-1.71-.032-2.565-.035-1.536-.005-3.072 0-4.607-.008H0V9.5h.196c2.104 0 4.208.005 6.313-.007.307-.002.628-.053.917-.154.608-.212.98-.81.986-1.5q.003-.573 0-1.146c-.002-.878-.595-1.475-1.467-1.475H.034V.936h.172C3.289.947 6.37.943 9.454.95c.638.001 1.283.03 1.86.35.68.38 1.116.956 1.157 1.743.049.917.039 1.837.04 2.755.001.645-.004 1.29-.036 1.934-.045.886-.27 1.72-.849 2.42-.472.573-1.058.98-1.794 1.146-.01.002-.016.014-.041.036.089.018.167.031.243.05 1.595.404 2.635 1.372 2.984 3.001.128.598.203 1.213.24 1.824.047.785.048 1.574.037 2.361m8.421.051c-.002 1.014-.14 2.011-.596 2.933-.86 1.734-2.254 2.807-4.108 3.298-.848.224-1.712.225-2.59.2v-4.084c.265-.02.528-.026.788-.058 1.106-.136 1.82-.776 2.238-1.78.278-.667.396-1.375.41-2.089.04-1.84.053-3.68.064-5.52a60 60 0 0 0-.035-2.542c-.03-.8-.128-1.591-.436-2.343-.431-1.049-1.256-1.616-2.387-1.628-.429-.005-.857-.001-1.293-.001V.955c.018-.007.033-.018.048-.018.776.01 1.556-.023 2.327.043a5.94 5.94 0 0 1 3.612 1.601 5.94 5.94 0 0 1 1.857 3.404c.066.379.104.767.104 1.151q.01 5.869-.003 11.738zM26 .96v24.087q-.08.008-.152.01-1.155.003-2.312 0-.145 0-.286-.033a.38.38 0 0 1-.31-.325c-.017-.112-.016-.227-.016-.341q.002-11.388-.006-22.775c0-.44.185-.619.62-.621q.94-.004 1.883-.002z"/></symbol>
+  <symbol id="i-brand-spintax" viewBox="0 0 250 250" fill="none"><path fill="#020202" d="M227.675 187.249c2.05-1.17 2.8-2.38 2.79-4.78-.09-38.6-.08-77.2 0-115.8 0-2.28-.75-3.42-2.68-4.53-33.43-19.17-66.81-38.42-100.16-57.72-1.92-1.11-3.27-1.15-5.23-.01-31.91 18.52-63.86 36.95-95.82 55.38-2.29 1.32-4.69 2.47-7.04 3.7v122.37c9.74 4.85 18.95 10.62 28.37 16.03 24.75 14.23 49.47 28.52 74.19 42.82.85.49 1.92.74 2.46 1.72h.62c17.06-9.9 34.1-19.83 51.18-29.7s34.17-19.72 51.33-29.47zM32.395 73.569c-.01-1.78.57-2.74 2.09-3.62 29.58-17.03 59.13-34.1 88.68-51.19 1.14-.66 2.03-.97 3.34-.21 15.19 8.85 30.43 17.62 45.64 26.43.15.09.25.29.61.72-18.65 10.77-37.07 21.41-55.49 32.05-11.22 6.48-22.41 13-33.68 19.39-1.74.99-2.42 2.02-2.4 4.07.11 11.32.05 22.64.05 33.95-1.15.45-1.8-.42-2.53-.83-14.62-8.41-29.19-16.88-43.83-25.25-1.82-1.04-2.53-2.18-2.5-4.33.13-10.39.1-20.79.01-31.19zm123.77 67.15c.01 1.68-.53 2.54-1.97 3.35-9.21 5.22-18.37 10.53-27.52 15.88-1.25.73-2.15.98-3.56.15-9.03-5.32-18.13-10.54-27.24-15.71-1.36-.77-1.78-1.67-1.76-3.18.09-5.56.03-11.12.03-16.68 0-5.46.05-10.92-.03-16.37-.03-1.61.38-2.56 1.89-3.41 8.95-5.05 17.85-10.2 26.71-15.41 1.32-.78 2.23-.84 3.59-.05 9.31 5.47 18.66 10.85 28.04 16.19 1.33.76 1.82 1.57 1.81 3.12-.07 10.71-.08 21.42 0 32.13zm-2.46 74.44a1391 1391 0 0 0-26.73 15.41c-1.47.87-2.48.82-3.9 0a33733 33733 0 0 0-88.44-51.05c-1.77-1.02-2.3-2.19-2.29-4.18.08-16.57.08-33.14.01-49.71 0-2.38.12-3.18 2.7-1.69 29.17 16.93 58.41 33.74 87.59 50.66 1.75 1.02 2.99 1.08 4.73.04 9.35-5.57 18.78-11.02 28.83-16.89v3.66c0 16.37-.04 32.73.05 49.1.01 2.21-.56 3.53-2.56 4.65zm15.32-9.4v-10.48c0-30.98-.03-61.96.05-92.94 0-2.23-.61-3.47-2.6-4.59-8.7-4.87-17.3-9.92-25.93-14.92-.94-.55-1.86-1.14-3.22-1.97 3.88-2.25 7.41-4.3 10.94-6.33 11.86-6.81 23.73-13.58 35.56-20.44 1.48-.86 2.56-1.03 4.14-.1 9.2 5.44 18.46 10.78 27.77 16.04 1.6.91 2.01 1.96 2 3.67-.04 33.97-.03 67.93-.02 101.9 0 1.37.01 2.51-1.47 3.36-15.35 8.78-30.65 17.64-45.98 26.47-.24.14-.56.15-1.26.32z"/><path fill="#d6af3c" d="M217.725 175.599c-.01-33.97-.02-67.93.02-101.9 0-1.71-.4-2.77-2-3.67-9.31-5.26-18.57-10.6-27.77-16.04-1.58-.93-2.66-.76-4.14.1-11.82 6.86-23.7 13.63-35.56 20.44-3.54 2.03-7.06 4.09-10.94 6.33 1.36.83 2.27 1.42 3.22 1.97 8.63 4.99 17.23 10.05 25.93 14.92 1.99 1.11 2.6 2.35 2.6 4.59-.08 30.98-.05 61.96-.05 92.94v10.48c.7-.17 1.02-.18 1.26-.32 15.32-8.83 30.63-17.69 45.98-26.47 1.48-.85 1.47-1.99 1.47-3.36z"/><path fill="#00abf3" d="M34.885 109.079c14.64 8.37 29.22 16.84 43.83 25.25.73.42 1.39 1.28 2.53.83 0-11.31.06-22.63-.05-33.95-.02-2.05.66-3.08 2.4-4.07 11.26-6.39 22.46-12.91 33.68-19.39 18.42-10.64 36.84-21.28 55.49-32.05-.36-.43-.45-.63-.61-.72-15.22-8.8-30.45-17.58-45.64-26.43-1.31-.76-2.2-.45-3.34.21-29.54 17.09-59.1 34.17-88.68 51.19-1.52.88-2.11 1.84-2.09 3.62.09 10.39.11 20.79-.01 31.19-.03 2.15.68 3.28 2.5 4.33z"/><path fill="#a91455" d="M156.215 161.409v-3.66c-10.06 5.87-19.48 11.32-28.83 16.89-1.74 1.04-2.98.97-4.73-.04-29.18-16.92-58.42-33.73-87.59-50.66-2.57-1.49-2.71-.69-2.7 1.69.07 16.57.07 33.14-.01 49.71 0 1.99.53 3.16 2.29 4.18 29.51 16.97 58.98 34 88.44 51.05 1.41.82 2.43.87 3.9 0 8.86-5.23 17.76-10.38 26.73-15.41 2-1.12 2.57-2.44 2.56-4.65-.09-16.37-.05-32.73-.05-49.1z"/><path fill="#fcfcfc" d="M154.355 105.469a2237 2237 0 0 1-28.04-16.19c-1.36-.8-2.27-.73-3.59.05a1727 1727 0 0 1-26.71 15.41c-1.5.85-1.91 1.8-1.89 3.41.09 5.46.03 10.91.03 16.37 0 5.56.05 11.12-.03 16.68-.02 1.51.4 2.41 1.76 3.18 9.12 5.18 18.21 10.39 27.24 15.71 1.41.83 2.31.58 3.56-.15 9.14-5.34 18.31-10.65 27.52-15.88 1.44-.82 1.98-1.68 1.97-3.35q-.12-16.065 0-32.13c.01-1.55-.48-2.36-1.81-3.12z"/></symbol>
+</svg>
+
+<header class="nav" role="banner">
+  <div class="container nav__inner">
+    <a href="/" class="nav__logo" aria-label="Spintax">
+      <svg class="icon icon--brand" aria-hidden="true" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M123.672 48.97q.306.407.553.852a22.6 22.6 0 0 0-2.033-5.378c-7.495-13.66-28.174-9.576-48.844 5.912a78 78 0 0 0-14.56 14.167 61 61 0 0 1 7.149 5.05 30 30 0 0 0 4.329 2.643 101 101 0 0 1 4.103-4.479c18.44-18.992 41.874-28.643 49.303-18.767" fill="url(#a)"></path><path d="m124.965 60.56.384-.113c.665-4.272.393-7.973-1.133-10.625a34.2 34.2 0 0 1 .749 10.738" fill="url(#b)"></path><path d="M124.168 49.757a7 7 0 0 0-.552-.853l-.084-.094c.168.516.318 1.04.449 1.584q.343.576.59 1.2a27 27 0 0 0-.403-1.837" fill="#e7e6e6"></path><path d="M73.132 51.19c20.613-15.6 41.302-19.807 48.816-6.184a21.5 21.5 0 0 1 1.611 3.748.4.4 0 0 0 .085.094c.196.272.375.553.553.853a22.4 22.4 0 0 0-2.061-5.36c-7.497-13.633-28.213-9.426-48.817 6.175a76.1 76.1 0 0 0-18.983 20.772q.066.072.122.15A75.9 75.9 0 0 1 73.132 51.19" fill="#e7e6e6"></path><path d="M67.248 64.626c-1.874-1.611-3.842-3.13-5.622-4.872a92.6 92.6 0 0 1-11.843 11.703C31.333 86.692 11.47 91.742 5.408 82.7c-.094-.141-.178-.29-.262-.432a18.9 18.9 0 0 1-2.577-5.621a21.26 21.26 0 0 1 .234-11.516C-.007 70.83-.842 76.46.93 81.276c4.685 12.734 25.617 14.87 46.69 4.788 9.828-4.684 17.942-11.243 23.349-18.149-1.228-1.087-2.456-2.192-3.72-3.289" fill="url(#c)"></path><path d="M22.564 45.625c-.987.084-1.961.279-2.904.58l.056.141-.169-.084c-4.066 2.904-4.207 2.923.169.084a47 47 0 0 0-7.187 5.5A50 50 0 0 0 3.488 63.69q-.375.702-.731 1.405a21.26 21.26 0 0 0-.188 11.58a18.9 18.9 0 0 0 2.577 5.623 19.05 19.05 0 0 1-2.464-9.145c.122-8.02 6.868-18.627 11.468-22.581a12.56 12.56 0 0 1 7.224-3.289 6 6 0 0 1 1.19-1.658" fill="url(#d)"></path><path opacity=".71" d="M40.152 78.54c8.639-5.36 16.416-12.752 18.833-15.928l1.406-1.527c1.096-1.04 2.455-3.13 3.532-4.132 2.745-1.434 7.87-5.013 13.23-8.574 2.305-1.527 4.629-3.035 5.94-3.747L89.39 55.05c-3.927 2.548-13.98 11.028-17.531 14.054-1.124.937.215-1.143-.834-.15l-7.496 6.737a74.8 74.8 0 0 1-17.1 10.897z" fill="url(#e)" style="mix-blend-mode:multiply"></path><path d="M120.777 42.373c15.338 29.046-19.573 42.65-37.89 22.619-7.722-9.735-8.574-14.533-13.39-19.48-20.614-20.004-50.26-7.57-65.672 17.503C5.877 60.56 18.91 45.7 37.865 48.023c14.645 1.874 17.043 20.614 38.715 31.66 24.605 12.593 68.811-4.413 44.197-37.31" fill="url(#f)"></path><path d="M77.237 78.971c-21.672-11.074-24.07-29.823-38.716-31.66C20.438 45.053 7.742 58.48 4.837 61.816v.056c3.842-4.235 16.06-15.929 33.028-13.802C52.51 49.944 54.91 68.683 76.582 79.72c15.235 7.778 37.975 4.217 47.251-7.439-9.651 11.085-31.716 14.29-46.595 6.69" fill="#1887b2" style="mix-blend-mode:darken" opacity=".57"></path><path d="M121.527 43.32c-.244-.347-.487-.694-.75-1.04 14.992 28.427-18.158 42.088-36.738 23.808 18.365 18.833 51.87 5.49 37.488-22.768" fill="#fff" style="mix-blend-mode:soft-light"></path><defs><linearGradient id="a" x1="54.453" y1="53.827" x2="125.715" y2="54.574" gradientUnits="userSpaceOnUse"><stop stop-color="#00abf3"></stop><stop offset="1" stop-color="#d6af3c"></stop></linearGradient><linearGradient id="b" x1="54.447" y1="54.455" x2="125.708" y2="55.201" gradientUnits="userSpaceOnUse"><stop offset=".01" stop-color="#ffa220"></stop><stop offset=".04" stop-color="#ffa61c"></stop><stop offset=".34" stop-color="#ffc000"></stop><stop offset=".61" stop-color="#fdc200"></stop><stop offset=".74" stop-color="#f6c900"></stop><stop offset=".75" stop-color="#f5cb00"></stop><stop offset=".78" stop-color="#f3c200"></stop><stop offset=".84" stop-color="#f0b100"></stop><stop offset=".89" stop-color="#efab00"></stop><stop offset="1" stop-color="#b74600"></stop></linearGradient><linearGradient id="c" x1="8.624" y1="64.228" x2="75.163" y2="79.532" gradientUnits="userSpaceOnUse"><stop offset=".01" stop-color="#00abf3"></stop><stop offset="1" stop-color="#a91455"></stop></linearGradient><linearGradient id="d" x1="22.51" y1="46.142" x2="7.676" y2="79.311" gradientUnits="userSpaceOnUse"><stop offset=".01" stop-color="#c59252"></stop><stop offset=".22" stop-color="#eba31c"></stop><stop offset=".34" stop-color="#ffac00"></stop><stop offset=".51" stop-color="#fdac03"></stop><stop offset=".63" stop-color="#f6ab0d"></stop><stop offset=".75" stop-color="#e9aa1e"></stop><stop offset=".78" stop-color="#e4a925"></stop><stop offset=".8" stop-color="#e7ac21"></stop><stop offset=".86" stop-color="#f4b70f"></stop><stop offset=".93" stop-color="#fcbe04"></stop><stop offset="1" stop-color="#ffc000"></stop></linearGradient><linearGradient id="e" x1="60.275" y1="14.08" x2="13.777" y2="40.929" gradientUnits="userSpaceOnUse"><stop offset=".11" stop-color="#fff"></stop><stop offset=".61" stop-color="#878787"></stop><stop offset=".95" stop-color="#fff"></stop></linearGradient><linearGradient id="f" x1="139.835" y1="88.519" x2="12.791" y2="29.818" gradientUnits="userSpaceOnUse"><stop stop-color="#00638d"></stop><stop offset="1" stop-color="#a91455"></stop></linearGradient></defs></svg>
+      Spintax
+    </a>
+
+    <ul class="nav__links">
+        <li><a href="/docs/">Документация</a></li>
+        <li><a href="/play/">Песочница</a></li>
+      </ul>
+
+    <div class="nav__actions">
+      <div class="search" data-search data-search-strings='{"idle":"Начните печатать, чтобы искать по документации.","noResults":"По запросу «{q}» ничего не нашлось.","navigate":"выбрать","open":"открыть","close":"закрыть"}'>
+        <button class="search__toggle theme-toggle" type="button" aria-label="Поиск по документации" aria-expanded="false">
+          <svg class="icon" aria-hidden="true"><use href="#i-mono-magnify"></use></svg>
+        </button>
+        <div class="search__field">
+          <svg class="icon search__field-icon" aria-hidden="true"><use href="#i-mono-magnify"></use></svg>
+          <input class="search__input" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="Поиск по сайту" aria-label="Поиск по документации"
+                 role="combobox" aria-expanded="false" aria-controls="search-results">
+          <kbd class="search__kbd" aria-hidden="true">⌘K</kbd>
+          <button class="search__close" type="button" aria-label="Закрыть поиск">
+            <svg class="icon" aria-hidden="true"><use href="#i-mono-close"></use></svg>
+          </button>
+        </div>
+        <div class="search__palette" hidden>
+          <div class="search__results" id="search-results" role="listbox" aria-label="Поиск по документации"></div>
+        </div>
+      </div>
+
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Переключить тему">
+        <svg class="icon" aria-hidden="true"><use href="#i-mono-sunny"></use></svg>
+      </button>
+
+      <div class="lang-dd" id="lang-dd">
+        <button class="lang-dd__btn" type="button" aria-expanded="false" aria-haspopup="true">
+          <span class="lang-dd__flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333"><path fill="#FFF" d="M0 85.33v341.332h512V85.33z"/><path fill="#0052B4" d="M0 85.333h512V426.67H0z"/><path fill="#FFF" d="M0 85.333h512v113.775H0z"/><path fill="#D80027" d="M0 312.884h512v113.775H0z"/></svg></span>RU
+        </button>
+        <div class="lang-dd__menu">
+      <a href="https://spintax.net/spintax-engines/" class="lang-dd__item" hreflang="en">
+        <span class="lang-dd__flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342"><g fill="#FFF"><path d="M0 0h513v341.3H0V0z"/><path d="M311.7 230 513 341.3v-31.5L369.3 230h-57.6zM200.3 111.3 0 0v31.5l143.7 79.8h56.6z"/></g><g fill="#012169"><path d="M393.8 230 513 295.7V230H393.8zm-82.1 0L513 341.3v-31.5L369.3 230h-57.6zm146.9 111.3-147-81.7v81.7h147zM90.3 230 0 280.2V230h90.3zm110 14.2v97.2H25.5l174.8-97.2zM118.2 111.3 0 45.6v65.7h118.2zm82.1 0L0 0v31.5l143.7 79.8h56.6zM53.4 0l147 81.7V0h-147zM421.7 111.3 513 61.1v50.2h-91.3zm-110-14.2V0h174.9L311.7 97.1z"/></g><g fill="#c8102e"><path d="M288 0h-64v138.7H0v64h224v138.7h64V202.7h224v-64H288V0z"/><path d="M311.7 230 513 341.3v-31.5L369.3 230h-57.6zM143.7 230 0 309.9v31.5L200.3 230h-56.6zM200.3 111.3 0 0v31.5l143.7 79.8h56.6zM368.3 111.3 513 31.5V0L311.7 111.3h56.6z"/></g></svg></span>EN
+      </a>
+      <a href="https://ru.spintax.net/spintax-engines/" class="lang-dd__item is-active" hreflang="ru">
+        <span class="lang-dd__flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333"><path fill="#FFF" d="M0 85.33v341.332h512V85.33z"/><path fill="#0052B4" d="M0 85.333h512V426.67H0z"/><path fill="#FFF" d="M0 85.333h512v113.775H0z"/><path fill="#D80027" d="M0 312.884h512v113.775H0z"/></svg></span>RU
+      </a>
+      <a href="https://spintax.net/zh/spintax-engines/" class="lang-dd__item" hreflang="zh">
+        <span class="lang-dd__flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342"><path fill="#D80027" d="M0 0h513v342H0z"/><g fill="#FFDA44"><path d="m226.8 239.2-9.7-15.6-17.9 4.4 11.9-14.1-9.7-15.6 17.1 6.9 11.8-14.1-1.3 18.4 17.1 6.9-17.9 4.4zM290.6 82l-10.1 15.4 11.6 14.3-17.7-4.8-10.1 15.5-1-18.4-17.7-4.8 17.2-6.6-1-18.4 11.6 14.3zM236.2 25.4l-2 18.3 16.8 7.6-18 3.8-2 18.3-9.2-16-17.9 3.8 12.3-13.7-9.2-15.9 16.8 7.5zM292.8 161.8l-14.9 10.9 5.8 17.5-14.9-10.8-14.9 11 5.6-17.6-14.9-10.7 18.4-.1 5.6-17.6 5.8 17.5zM115 46.3l17.3 53.5h56.2l-45.4 32.9 17.3 53.5-45.4-33-45.5 33 17.4-53.5-45.5-32.9h56.3z"/></g></svg></span>中文
+      </a>
+        </div>
+      </div>
+
+      <div class="menu" id="site-menu">
+        <button class="btn btn--ghost btn--sm menu__trigger" type="button" id="menu-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="menu-panel">
+          <svg class="icon" aria-hidden="true"><use href="#i-mono-menu"></use></svg>
+          Меню
+        </button>
+        <nav class="menu__panel" id="menu-panel" aria-label="Меню">
+        <div class="menu__section">
+          <p class="menu__group-title">С чего начать</p>
+          <ul class="menu__list"><li><a class="menu__link" href="/what-is-spintax/"><svg class="icon" aria-hidden="true"><use href="#i-mono-help-circle-outline"></use></svg> Что такое Spintax?</a></li><li><a class="menu__link" href="/docs/syntax/"><svg class="icon" aria-hidden="true"><use href="#i-mono-code-braces"></use></svg> Справочник синтаксиса</a></li><li><a class="menu__link" href="/docs/nested-spintax/"><svg class="icon" aria-hidden="true"><use href="#i-mono-layers"></use></svg> Вложенный Spintax</a></li><li><a class="menu__link" href="/spintax-for-n8n/"><svg class="icon" aria-hidden="true"><use href="#i-mono-sitemap"></use></svg> Spintax для n8n</a></li></ul>
+        </div>        <div class="menu__section">
+          <p class="menu__group-title">Гайды по авторингу</p>
+          <ul class="menu__list"><li><a class="menu__link" href="/docs/authoring-mindset/"><svg class="icon" aria-hidden="true"><use href="#i-mono-swap-horizontal"></use></svg> Обратный порядок написания</a></li><li><a class="menu__link" href="/docs/variables/"><svg class="icon" aria-hidden="true"><use href="#i-mono-tag"></use></svg> Переменные и переиспользование</a></li><li><a class="menu__link" href="/docs/permutations/"><svg class="icon" aria-hidden="true"><use href="#i-mono-shuffle-variant"></use></svg> Permutations на практике</a></li><li><a class="menu__link" href="/docs/grammar-safe-spintax/"><svg class="icon" aria-hidden="true"><use href="#i-mono-spellcheck"></use></svg> Грамматически безопасный spintax</a></li><li><a class="menu__link" href="/docs/template-composition/"><svg class="icon" aria-hidden="true"><use href="#i-mono-puzzle-outline"></use></svg> Композиция шаблонов</a></li><li><a class="menu__link" href="/docs/conditional-spintax/"><svg class="icon" aria-hidden="true"><use href="#i-mono-call-split"></use></svg> Условный spintax</a></li><li><a class="menu__link" href="/docs/plural-spintax/"><svg class="icon" aria-hidden="true"><use href="#i-mono-numeric"></use></svg> Согласование с числом</a></li></ul>
+        </div>        <div class="menu__section">
+          <p class="menu__group-title">Движки и пакеты</p>
+          <ul class="menu__list"><li><a class="menu__link" href="/spintax-for-javascript/"><svg class="icon" aria-hidden="true"><use href="#i-mono-language-javascript"></use></svg> Spintax для JavaScript</a></li><li><a class="menu__link" href="/spintax-for-php/"><svg class="icon" aria-hidden="true"><use href="#i-mono-language-php-box"></use></svg> Spintax для PHP</a></li><li><a class="menu__link" href="/spintax-engines/" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-mono-package-variant-closed"></use></svg> Движки spintax — вся семья</a></li></ul>
+        </div>        <div class="menu__section">
+          <p class="menu__group-title">Инструменты и ресурсы</p>
+          <ul class="menu__list"><li><a class="menu__link" href="/play/"><svg class="icon" aria-hidden="true"><use href="#i-mono-play-circle-outline"></use></svg> Песочница Spintax</a></li><li><a class="menu__link" href="/spintax-editor/"><svg class="icon" aria-hidden="true"><use href="#i-mono-pencil-outline"></use></svg> Редакторы</a></li><li><a class="menu__link" href="/examples/"><svg class="icon" aria-hidden="true"><use href="#i-mono-file-document-outline"></use></svg> Spintax на примере</a></li><li><a class="menu__link" href="/ai-spintax-templates/"><svg class="icon" aria-hidden="true"><use href="#i-mono-robot-outline"></use></svg> Пишем шаблоны с ИИ</a></li><li><a class="menu__link" href="/spintax-mcp/"><svg class="icon" aria-hidden="true"><use href="#i-mono-link-variant"></use></svg> MCP-сервер spintax</a></li><li><a class="menu__link" href="/spintax-for-cold-email/"><svg class="icon" aria-hidden="true"><use href="#i-mono-email-outline"></use></svg> Spintax для холодных рассылок</a></li><li><a class="menu__link" href="/ai-content-costs/"><svg class="icon" aria-hidden="true"><use href="#i-mono-currency-usd"></use></svg> Сколько реально стоит AI-контент</a></li></ul>
+        </div>        <div class="menu__section">
+          <p class="menu__group-title">Сообщество</p>
+          <ul class="menu__list"><li><a class="menu__link" href="https://github.com/investblog/spintax" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-mono-github"></use></svg> GitHub</a></li><li><a class="menu__link" href="https://t.me/spintaxseo" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-mono-telegram"></use></svg> Telegram</a></li><li><a class="menu__link" href="https://301.ru" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-brand-301"></use></svg> 301st</a></li></ul>
+        </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main data-pagefind-body>
+
+<div class="container">
+  <div class="docs-header">
+    <nav class="docs-nav" aria-label="Breadcrumb" data-pagefind-ignore>
+      <span class="docs-nav__sep">/</span><a href="/" class="docs-nav__home"><svg class="icon" aria-hidden="true"><use href="#i-mono-home-outline"></use></svg>Главная</a><span class="docs-nav__sep">/</span><span>Движки spintax</span>
+    </nav>
+  </div>
+
+<div class="container">
+  <article class="docs-article">
+    <h1>Движки spintax</h1>
+    <p class="docs-lead">Один синтаксис spintax, четыре отдельных движка — для JavaScript, PHP, Python и Object Pascal. Каждый — самостоятельная реализация, а не порт остальных, и все четыре сверены по <em>одному</em> набору эталонных фикстур, так что шаблон рендерится одинаково, где бы вы его ни запустили. Лицензия MIT, ноль зависимостей, ни одного внешнего сервиса в цепочке.</p>
+
+<h2>Один синтаксис, четыре рантайма</h2>
+
+<p><a href="/docs/syntax/">Синтаксис spintax</a>, описанный на этом сайте, — надмножество плоского <code>{a|b|c}</code>, на котором большинство инструментов останавливается. Он добавляет перестановки, переменные с областью видимости, условия по значению, согласование с числом с учётом локали, include и стадию пост-обработки. Это надмножество не привязано к одному языку: его реализуют четыре движка, а вы выбираете по тому рантайму, который у вас уже есть.</p>
+
+<div class="docs-table-wrap">
+<table>
+  <thead>
+    <tr><th>Рантайм</th><th>Пакет</th><th>Установка</th><th>Лицензия</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>JavaScript / TypeScript</td><td><code>@spintax/core</code></td><td><code>npm install @spintax/core</code></td><td>MIT</td></tr>
+    <tr><td>PHP 8.0+</td><td><code>spintax/core</code></td><td><code>composer require spintax/core</code></td><td>MIT</td></tr>
+    <tr><td>Python 3.10+</td><td><code>spintax-core</code></td><td><code>pip install spintax-core</code></td><td>MIT</td></tr>
+    <tr><td>Object Pascal / Free Pascal</td><td>репозиторий <code>spintax-win</code></td><td><code>git clone</code> (без пакетного реестра)</td><td>MIT</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Все четыре — без зависимостей. WordPress-плагин под GPL-2.0 встраивает PHP-движок и добавляет сверху редактор, кэширование и привязки к полям; пакеты выше — это движок сам по себе, без предположений о том, где лежат ваши шаблоны.</p>
+
+<h2>Не порты — независимые реализации, сверенные по одному корпусу</h2>
+
+<p>«Один синтаксис на четырёх языках» легко заявить и трудно удержать. Два написанных вручную парсера расходятся в тот же миг, когда один чинит краевой случай, которого другой не видел. Эту семью держит вместе не общий код — его почти нет, — а общий <strong>эталонный корпус</strong>: набор языконезависимых фикстур, каждая из которых — входной шаблон плюс точный вывод, диагностика или извлечение, которые он обязан выдать.</p>
+
+<p>Тест-сьют каждого движка загружает тот же корпус и проверяется по нему. Случай, который проходит в TypeScript и падает в Pascal, — это баг в Pascal, пойманный до релиза, а не различие, которое пользователи находят в проде. Корпус — это машинно проверяемый паритет, а не обещание в README.</p>
+
+<ul>
+  <li><strong>Корпус живёт вместе с эталонным движком.</strong> Новые фикстуры пишутся в <code>@spintax/core</code>; сьюты PHP, Python и Pascal читают ровно тот же JSON.</li>
+  <li><strong>Семантика зафиксирована, случайность — нет.</strong> Фикстуры фиксируют, что конструкция <em>значит</em>: какие варианты допустимы, как согласуется число, что выбирает условие. Они сознательно не фиксируют случайный выбор: вывод по seed воспроизводим <em>внутри</em> одного движка, а одинаковые случайные последовательности <em>между</em> движками — это не цель. Такие случаи приватны для движка и пропускаются намеренно.</li>
+</ul>
+
+<p>Практическая выгода: можно написать шаблон в песочнице на этом сайте — она крутит JavaScript-движок — и быть уверенным, что PHP-джоба, Python-скрипт или Pascal-бинарник, который рендерит его в проде, прочитает его так же.</p>
+
+<h2>Выбор по рантайму</h2>
+
+<h3>JavaScript и TypeScript — <code>@spintax/core</code></h3>
+
+<p>Эталонный движок и дом корпуса. Ноль рантайм-зависимостей, ESM-first с двойным CJS, работает без изменений в Node 18+, на Cloudflare Workers и в браузере — именно он крутит <a href="/play/">песочницу</a> на этом сайте.</p>
+
+<pre><code>import { render, validate, extract } from '@spintax/core';
+
+render('{Hello|Hi} %name%!', { context: { name: 'Ada' }, seed: 42 });
+// детерминирован при заданном seed; пост-обработка включена по умолчанию</code></pre>
+
+<p>Один вызов <code>render()</code> прогоняет весь пайплайн. У него самый богатый инструментарий из четырёх — переиспользуемый AST из <code>parse</code>, плюс <code>analyze</code> и <code>neutralize</code>, — а его диагностики несут стабильный, сверенный по корпусу <code>code</code>, что и позволяет песочнице сопоставлять ошибку с переведённым сообщением. <a href="/spintax-for-javascript/">Полный гайд по JavaScript</a> разбирает API подробно.</p>
+
+<h3>PHP — <code>spintax/core</code></h3>
+
+<p>Не привязан к фреймворку, PHP 8.0+, <code>ext-mbstring</code> — и больше ничего. В отличие от трёх других, этот пакет — не независимая реализация: это <strong>вынос собственного движка WordPress-плагина</strong> тем же правообладателем, перелицензированный под MIT, чтобы его мог использовать любой PHP-проект, а плагин остался под GPL.</p>
+
+<pre><code>use Spintax\Core\Pipeline;
+
+$pipeline = new Pipeline();
+echo $pipeline->render('{Hello|Hi} %name%!', ['name' =&gt; 'Ada']);</code></pre>
+
+<p>Аргумента <code>seed</code> нет — детерминизм вы внедряете, сконструировав пайплайн со своим селектором, — и стабильного <code>code</code> у диагностик тоже нет; валидатор отдаёт сообщение со строкой и колонкой, а хост ветвится по структуре. <a href="/spintax-for-php/">Полный гайд по PHP</a> разбирает, что пакет несёт и чего сознательно не несёт.</p>
+
+<h3>Python — <code>spintax-core</code></h3>
+
+<p>Python 3.10+, независимая реализация, сверенная по корпусу. API в snake_case и читается так, как ждёт Python: <code>render(template, *, context=, seed=, post_process=)</code>.</p>
+
+<pre><code>from spintax_core import render, validate, parse
+
+render("{Hello|Hi} there!", seed=42)             # тот же seed — тот же вывод
+render("Hi %name%!", context={"name": "Sam"})    # "Hi Sam!"</code></pre>
+
+<aside class="callout callout--warn">
+  <h3 class="callout__heading">
+    <svg class="icon" aria-hidden="true"><use href="#i-mono-alert-circle-outline"></use></svg>
+    Две ловушки, о которых стоит знать до <code>pip install</code>
+  </h3>
+  <p><strong>Пост-обработка включена по умолчанию</strong> и делает заглавной первую букву предложения, поэтому <code>render("{fast|cheap} hosting")</code> вернёт «Fast hosting», хотя вариант записан со строчной. Передайте <code>post_process=False</code>, когда нужен сырой выбор.</p>
+  <p><strong>Имя <code>spintax</code> на PyPI — это другой, старый пакет</strong> — под GPLv3 и без поддержки с 2018 года. Этот движок называется <code>spintax-core</code>; ставьте именно его.</p>
+</aside>
+
+<p>Исходники и полные заметки о паритете: <a href="https://github.com/investblog/spintax-py" target="_blank" rel="noopener">репозиторий <code>spintax-py</code></a>.</p>
+
+<h3>Object Pascal / Free Pascal</h3>
+
+<p>Четвёртый движок и самый новый: реализация без зависимостей на Object Pascal, собранная Free Pascal 3.2.2+ в режиме <code>{$mode delphi}</code>. Пакетного реестра у него нет — вы клонируете <a href="https://github.com/investblog/spintax-win" target="_blank" rel="noopener">репозиторий</a> и подключаете модуль к своей программе.</p>
+
+<pre><code>uses Spintax;
+
+var ctx: TSpContext;
+begin
+  DefaultSystemCodePage := CP_UTF8;   { объявить UTF-8 один раз }
+  ctx := Default(TSpContext);
+  ctx.PostProcess := True;
+  SpRender('{Hello|Hi} there!', ctx);
+end;</code></pre>
+
+<p>Детерминизм здесь — это шов, а не seed: оставьте <code>ctx.Rng</code> равным nil для недетерминированного вывода или внедрите одну из поставляемых стратегий — <code>TFirstRng</code>, <code>TLastRng</code>, <code>TSequenceRng</code> или seeded-<code>TMulberry32Rng</code>. Движок реализует всё надмножество и проходит 168 из 172 случаев корпуса; четыре пропущенных — это приватные для движка проверки RNG. Тот же исходник компилируется без изменений и UTF-16-компилятором Object Pascal; эта портируемость поддерживается «попутно»: побочный эффект, а не вторая платформа.</p>
+
+<h2>Что общего и где расходятся</h2>
+
+<p>Каждый движок рендерит один и тот же синтаксис и возвращает валидный выбор для любого корректного шаблона. Расходятся они в эргономике — как вы дотягиваетесь до детерминизма, сколько инструментов идёт вокруг ядра и в каком виде возвращаются диагностики.</p>
+
+<div class="docs-table-wrap">
+<table>
+  <thead>
+    <tr><th></th><th>JavaScript</th><th>PHP</th><th>Python</th><th>Pascal</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Воспроизводимый вывод</td><td><code>seed</code></td><td>внедрённый селектор</td><td><code>seed</code></td><td>внедрённый <code>TSpRng</code></td></tr>
+    <tr><td>Пост-обработка по умолчанию</td><td>вкл</td><td>выкл (опц. аргумент)</td><td><strong>вкл</strong></td><td>выкл (обнулённая запись)</td></tr>
+    <tr><td>Переиспользуемый AST</td><td>да</td><td>да</td><td>да</td><td>да</td></tr>
+    <tr><td>Стабильный код диагностики</td><td>да</td><td>нет</td><td>нет</td><td>нет</td></tr>
+    <tr><td>Подробный гайд на сайте</td><td><a href="/spintax-for-javascript/">да</a></td><td><a href="/spintax-for-php/">да</a></td><td>репозиторий</td><td>репозиторий</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Что сверено между всеми четырьмя — это <em>вердикт</em>: валиден ли шаблон и во что рендерится конструкция, — а не формулировка объяснения проблемы и не конкретный случайный выбор.</p>
+
+<h2>Все под MIT — поэтому они сочетаются</h2>
+
+<p>Четыре пакета лицензированы под MIT и не зависят ни от чего. WordPress-плагин остаётся под GPL-2.0, а MIT совместим с GPL, так что GPL-плагин может использовать MIT-движок на PHP, тогда как обратное не сработало бы. Всё рендерится локально: ни внешнего сервиса, ни вызова на каждую генерацию, ни данных, покидающих ваш рантайм.</p>
+
+<aside class="callout callout--ai">
+  <h3 class="callout__heading">
+    <svg class="icon" aria-hidden="true"><use href="#i-mono-flash"></use></svg>
+    Хорошо сочетается с LLM
+  </h3>
+  <p>Пусть модель напишет шаблон <em>один раз</em>, а дальше рендерьте сколько угодно вариаций на своём железе — детерминированно, бесплатно и офлайн, в любом из четырёх рантаймов, что у вас уже есть. Модель отвечает за креатив, движок — за масштаб.</p>
+  <p>Интересно, сколько стоит «без вызова на каждую генерацию»? Смотрите <a href="/ai-content-costs/">во что обходится AI-контент</a>.</p>
+  <p>Для кодинг-агентов есть сжатая версия: скилл <a href="https://spintax.net/.well-known/agent-skills/spintax-engines/SKILL.md">spintax-engines</a> покрывает установку и API всех четырёх движков, а шаблоны можно валидировать через MCP — на хосте <code>https://spintax.net/mcp</code> или у себя: <code>npx @spintax/mcp</code>, без ограничений на размер и с чтением <code>#include</code> с диска.</p>
+</aside>
+
+    <hr>
+
+    <div class="docs-links">
+      <a href="/play/" class="btn btn--accent btn--sm">
+        <svg class="icon" aria-hidden="true"><use href="#i-mono-play-circle-outline"></use></svg>
+        Попробовать в песочнице
+      </a>
+      <a href="/spintax-for-javascript/" class="btn btn--ghost btn--sm">
+        <svg class="icon" aria-hidden="true"><use href="#i-mono-code-braces"></use></svg>
+        Гайд по JavaScript
+      </a>
+      <a href="/spintax-for-php/" class="btn btn--ghost btn--sm">
+        <svg class="icon" aria-hidden="true"><use href="#i-mono-language-php-box"></use></svg>
+        Гайд по PHP
+      </a>
+      <a href="https://github.com/investblog" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">
+        <svg class="icon" aria-hidden="true"><use href="#i-mono-github"></use></svg>
+        Все репозитории на GitHub
+      </a>
+      <a href="/docs/" class="btn btn--ghost btn--sm">
+        <svg class="icon" aria-hidden="true"><use href="#i-mono-arrow-left"></use></svg>
+        Ко всем гайдам
+      </a>
+    </div>
+  </article>
+</div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <ul class="footer__links">
+      <li><a href="/">Главная</a></li>
+      <li><a href="/docs/">Документация</a></li>
+      <li><a href="/what-is-spintax/">WTF Spintax?</a></li>
+    </ul>
+    <ul class="footer__links">
+      <li><a href="https://github.com/investblog/spintax" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-mono-github"></use></svg> GitHub</a></li>
+      <li><a href="https://t.me/spintaxseo" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-mono-telegram"></use></svg> Telegram</a></li>
+      <li><a href="https://301.ru" target="_blank" rel="noopener" title="Создано 301.ru — платформа управления редиректами на Cloudflare Workers"><svg class="icon" aria-hidden="true"><use href="#i-brand-301"></use></svg> 301st</a></li>
+      <li><a href="/rss.xml"><svg class="icon" aria-hidden="true"><use href="#i-mono-rss-box"></use></svg> RSS</a></li>
+    </ul>
+    <p class="footer__copy"><svg class="icon icon--lg footer__brand" aria-hidden="true"><use href="#i-brand-spintax"></use></svg>&copy; 2025&ndash;2026 Spintax.</p>
+  </div>
+</footer>
+
+</body>
+</html>

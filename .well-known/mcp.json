@@ -1,0 +1,90 @@
+{
+  "$comment": "MCP Server Card. SEP-2127 is still a draft, so this card is a conservative superset of the shapes in circulation (registry server.json remotes + discovery fields). It describes a real, live server. servers[0].summary exists because the official registry caps description at 100 characters and rejected the long one; scripts/build-server-json.mjs sends the summary and keeps this file the single source for both.",
+  "name": "net.spintax/mcp",
+  "title": "spintax.net MCP server",
+  "description": "Stateless MCP server for the spintax template syntax: validate_spintax (diagnostics with line/column), render_spintax (seeded variants), analyze_spintax (variables, directives, construct counts). Resources are the Markdown mirrors of the documentation. Backed by @spintax/core, the reference engine. No authentication. Also runs locally over stdio as the @spintax/mcp npm package — same tools, no caps, and #include from disk.",
+  "serverInfo": {
+    "name": "spintax-net",
+    "title": "spintax.net",
+    "version": "1.0.6"
+  },
+  "url": "https://spintax.net/mcp",
+  "transport": "streamable-http",
+  "protocolVersions": [
+    "2026-07-28",
+    "2025-11-25",
+    "2025-06-18",
+    "2025-03-26",
+    "2024-11-05"
+  ],
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    },
+    "resources": {}
+  },
+  "authentication": {
+    "type": "none"
+  },
+  "version": "1",
+  "servers": [
+    {
+      "name": "net.spintax/mcp",
+      "title": "spintax.net MCP server",
+      "description": "Stateless MCP server for the spintax template syntax: validate_spintax (diagnostics with line/column), render_spintax (seeded variants), analyze_spintax (variables, directives, construct counts). Resources are the Markdown mirrors of the documentation. Backed by @spintax/core, the reference engine. No authentication. Also runs locally over stdio as the @spintax/mcp npm package — same tools, no caps, and #include from disk.",
+      "summary": "Validate, render and analyze spintax templates. Backed by @spintax/core. No authentication.",
+      "version": "1.0.6",
+      "websiteUrl": "https://spintax.net/docs/",
+      "icons": [
+        {
+          "src": "https://spintax.net/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": ["180x180"]
+        },
+        {
+          "src": "https://spintax.net/favicon-96x96.png",
+          "mimeType": "image/png",
+          "sizes": ["96x96"]
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://spintax.net/mcp"
+        }
+      ],
+      "packages": [
+        {
+          "registryType": "npm",
+          "identifier": "@spintax/mcp",
+          "version": "0.2.3",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "protocolVersions": [
+        "2026-07-28",
+        "2025-11-25",
+        "2025-06-18",
+        "2025-03-26",
+        "2024-11-05"
+      ],
+      "capabilities": {
+        "tools": {
+          "listChanged": false
+        },
+        "resources": {}
+      },
+      "authentication": {
+        "type": "none"
+      },
+      "documentation": {
+        "llms": "https://spintax.net/llms.txt",
+        "syntax": "https://spintax.net/docs/syntax.md",
+        "skills": "https://spintax.net/.well-known/agent-skills/index.json",
+        "engines": "https://spintax.net/spintax-engines.md"
+      }
+    }
+  ]
+}

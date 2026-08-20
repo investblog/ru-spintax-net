@@ -1,0 +1,11 @@
+{
+  "slug": "docs-plural-spintax",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Выбор правильной грамматической формы существительного по числу. RU/UK/BE и SR/HR/BS — 3 формы, EN-style — 2. Двоеточный синтаксис, числовые краевые случаи, lenient runtime, разобранный пример, сравнение с ICU.",
+  "bytes": 94267,
+  "sha256": "dc7424940f782930"
+}

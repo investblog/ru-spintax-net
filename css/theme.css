@@ -1,0 +1,323 @@
+/* =========================
+   Spintax – THEME TOKENS
+   Palette derived from logo:
+     #00abf3 blue, #d6af3c gold,
+     #a91455 magenta, #020202/#fcfcfc
+   ========================= */
+
+:root {
+  color-scheme: dark;
+
+  /* Brand palette */
+  --blue-900: #005f87;
+  --blue-700: #0088cc;
+  --blue-500: #00abf3;
+  --blue-300: #33bcf5;
+  --blue-neon: #66cdf7;
+
+  --gold-900: #8a6e10;
+  --gold-700: #b8941f;
+  --gold-500: #d6af3c;
+  --gold-300: #e0c060;
+  --gold-neon: #ebd080;
+
+  --magenta-900: #6e0c38;
+  --magenta-700: #a91455;
+  --magenta-500: #cc2070;
+  --magenta-300: #e04090;
+
+  /* CTA accent: gold with dark text passes AA 8.45:1 */
+  --accent: #d6af3c;
+  --accent-hover: #e0c060;
+  --accent-soft: rgba(214, 175, 60, 0.14);
+
+  /* Neutrals */
+  --gray-950: #000000;
+  --gray-900: #111114;
+  --gray-800: #1a1a20;
+  --gray-700: #2a2a32;
+  --gray-600: #3a3a44;
+  --gray-500: #4a4a54;
+  --gray-400: #808088;
+
+  --gray-50:  #f8f8fa;
+  --gray-100: #f4f4f6;
+  --gray-200: #eeeef2;
+  --gray-250: #e2e2e6;
+  --gray-300: #d0d0d6;
+  --gray-350: #b8b8c0;
+
+  /* Semantic */
+  --danger: #FF4F6E;
+  --success: #18C27A;
+  --warning: #FFB347;
+  --info: #3B82F6;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  --font-mono: "SF Mono", "Cascadia Code", "Fira Code", "JetBrains Mono",
+    ui-monospace, monospace;
+
+  --fs-body: 1rem;
+  --lh-body: 1.5;
+
+  /* Control sizing */
+  --fs-control: clamp(0.94rem, 0.92rem + 0.2vw, 0.98rem);
+  --lh-control: 1.25;
+  --control-pad-y: 0.35em;
+  --control-pad-x: 0.90em;
+  --border-1: 1px;
+  --control-min-height: calc(
+    1em * var(--lh-control) +
+    2 * var(--control-pad-y) +
+    2 * var(--border-1)
+  );
+
+  --r-pill: 999px;
+  --r-field: 0.75rem;
+  --control-radius: var(--r-pill);
+  --inline-gap: 0.5rem;
+  --stack-gap: 0.75rem;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  --measure: 68ch;              /* reading column for card excerpts */
+  /* docs-hub card glyph — per-section accent (dark uses the lighter -300 shades) */
+  --glyph-blue: var(--blue-300);
+  --glyph-gold: var(--gold-300);
+  --glyph-magenta: var(--magenta-300);
+  --glyph-color: var(--glyph-magenta);  /* default; sections override per accent */
+  --glyph-opacity: 0.18;                /* dark default; toned down in light */
+
+  --control-scale-sm: 0.9;
+  --control-scale-md: 1;
+  --control-scale-lg: 1.1;
+
+  --radius-xs: 0.25rem;
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  --border-width: 1px;
+  --border-style: solid;
+
+  --shadow-sm-light: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md-light: 0 6px 18px rgba(0, 0, 0, 0.12);
+  --shadow-lg-light: 0 18px 45px rgba(0, 0, 0, 0.25);
+
+  --shadow-sm-dark: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md-dark: 0 6px 18px rgba(0, 0, 0, 0.45);
+  --shadow-lg-dark: 0 18px 45px rgba(0, 0, 0, 0.65);
+
+  --shadow-sm: var(--shadow-sm-light);
+  --shadow-md: var(--shadow-md-light);
+  --shadow-lg: var(--shadow-lg-light);
+
+  --shadow-soft:   0 1px 3px  color-mix(in srgb, var(--gray-900) 18%, transparent),
+                   0 1px 2px  color-mix(in srgb, var(--gray-900) 22%, transparent);
+  --shadow-subtle: 0 3px 6px  color-mix(in srgb, var(--gray-900) 16%, transparent),
+                   0 1px 4px  color-mix(in srgb, var(--gray-900) 20%, transparent);
+
+  --transition-fast: 120ms ease-out;
+  --transition-md: 160ms ease-out;
+
+  /* Z-index */
+  --z-base: 1;
+  --z-dropdown: 20;
+  --z-sticky: 30;
+  --z-header: 200;
+  /* Above the sticky nav: the mobile search sheet covers it. */
+  --z-modal: 300;
+
+  --btn-text-on-dark: #FFFFFF;
+  --btn-text-on-bright: #111114;
+}
+
+/* ========================= DARK THEME ========================= */
+:root[data-theme="dark"] {
+  --bg: #0e1117;
+  --bg-elevated: #161b22;
+  --bg-soft: #1c2128;
+
+  --panel: var(--bg-elevated);
+  --panel-border: color-mix(in srgb, var(--gray-100) 18%, transparent);
+
+  --text-main: #e6edf3;
+  --text-muted: #8b949e;
+  --text-subtle: #6e7681;
+  --text-invert: #FFFFFF;
+
+  --text: var(--text-main);
+  --muted: var(--text-muted);
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --shadow-sm: var(--shadow-sm-dark);
+  --shadow-md: var(--shadow-md-dark);
+  --shadow-lg: var(--shadow-lg-dark);
+  --shadow-soft:   0 1px 3px  color-mix(in srgb, var(--gray-700) 14%, var(--blue-900) 8%),
+                   0 1px 2px  color-mix(in srgb, var(--gray-700) 18%, var(--blue-900) 6%);
+  --shadow-subtle: 0 3px 6px  color-mix(in srgb, var(--gray-700) 12%, var(--blue-900) 10%),
+                   0 1px 4px  color-mix(in srgb, var(--gray-700) 16%, var(--blue-900) 8%);
+
+  /* Blue-500 on dark bg: ~6.9:1 contrast */
+  --primary: #00abf3;
+  --primary-soft: rgba(0, 171, 243, 0.12);
+  --primary-hover: #33bcf5;
+
+  --brand: var(--primary);
+
+  --accent-bg: var(--accent);
+  --accent-bg-hover: var(--accent-hover);
+
+  --input-bg: rgba(13, 17, 23, 0.9);
+  --input-border: var(--border-subtle);
+  --input-border-focus: rgba(0, 171, 243, 0.8);
+
+  --nav-bg: rgba(14, 17, 23, 0.96);
+
+  --code-bg: #161b22;
+  --code-border: rgba(255, 255, 255, 0.08);
+
+  /*
+    Button tokens — dark
+
+    Accent (gold CTA):  #d6af3c bg / #111 text = 8.45:1 AA ✓
+    Primary (blue):     #0070aa bg / #FFF text = 5.30:1 AA ✓
+    Ghost:              transparent / light text / subtle border
+    Muted:              faded, non-interactive
+  */
+  --btn-accent-bg: #d6af3c;
+  --btn-accent-bg-hover: #e8c55a;
+  --btn-accent-text: #111114;
+  --btn-accent-border-hover: rgba(232, 197, 90, 0.25);
+  --btn-accent-shadow-hover: 0 4px 14px rgba(214, 175, 60, 0.40);
+
+  --btn-primary-bg: #0070aa;
+  --btn-primary-bg-hover: #0088cc;
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-border-hover: rgba(0, 136, 204, 0.30);
+  --btn-primary-shadow-hover: 0 4px 14px rgba(0, 171, 243, 0.30);
+
+  --btn-ghost-text: #e6edf3;
+  --btn-ghost-border: rgba(255, 255, 255, 0.10);
+  --btn-ghost-bg-hover: #1c2128;
+  --btn-ghost-border-hover: rgba(255, 255, 255, 0.20);
+
+  --btn-muted-text: #6e7681;
+  --btn-muted-border: rgba(255, 255, 255, 0.06);
+}
+
+/* LIGHT THEME */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  /* light uses the deeper -700 shades so the tint reads on white */
+  --glyph-blue: var(--blue-700);
+  --glyph-gold: var(--gold-700);
+  --glyph-magenta: var(--magenta-700);
+  --glyph-color: var(--glyph-magenta);
+  --glyph-opacity: 0.11;    /* softer on white */
+
+  --bg: #FFFFFF;
+  --bg-elevated: #f6f8fa;
+  --bg-soft: #f0f3f6;
+
+  --panel: var(--bg-elevated);
+  --panel-border: color-mix(in srgb, var(--gray-900) 18%, transparent);
+
+  --text-main: #1f2328;
+  --text-muted: #656d76;
+  --text-subtle: #6e7681;
+  --text-invert: #FFFFFF;
+
+  --text: var(--text-main);
+  --muted: var(--text-muted);
+
+  --border-subtle: rgba(15, 23, 42, 0.06);
+  --border-strong: rgba(15, 23, 42, 0.16);
+
+  --shadow-sm: var(--shadow-sm-light);
+  --shadow-md: var(--shadow-md-light);
+  --shadow-lg: var(--shadow-lg-light);
+
+  /* Darker blue for AA on white: ~4.65:1 */
+  --primary: #0077cc;
+  --primary-soft: rgba(0, 119, 204, 0.08);
+  --primary-hover: #005f87;
+
+  --brand: var(--primary);
+
+  --accent: #b8941f;
+  --accent-hover: #9a7c14;
+  --accent-soft: rgba(184, 148, 31, 0.10);
+  --accent-bg: var(--accent);
+  --accent-bg-hover: var(--accent-hover);
+
+  --input-bg: #FFFFFF;
+  --input-border: var(--border-subtle);
+  --input-border-focus: rgba(0, 119, 204, 0.8);
+
+  --nav-bg: rgba(255, 255, 255, 0.92);
+
+  --code-bg: #f6f8fa;
+  --code-border: rgba(15, 23, 42, 0.08);
+
+  /*
+    Button tokens — light
+
+    Accent (magenta CTA): #a91455 bg / #FFF text = 7.3:1 AA ✓
+    Primary (blue):       #0077cc bg / #FFF text = 4.65:1 AA ✓
+    Ghost:                transparent / dark text / visible border
+    Muted:                faded, non-interactive
+  */
+  --btn-accent-bg: #a91455;
+  --btn-accent-bg-hover: #c41868;
+  --btn-accent-text: #FFFFFF;
+  --btn-accent-border-hover: rgba(196, 24, 104, 0.20);
+  --btn-accent-shadow-hover: 0 4px 14px rgba(169, 20, 85, 0.30);
+
+  --btn-primary-bg: #0077cc;
+  --btn-primary-bg-hover: #005da0;
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-border-hover: rgba(0, 93, 160, 0.25);
+  --btn-primary-shadow-hover: 0 4px 14px rgba(0, 119, 204, 0.25);
+
+  --btn-ghost-text: #1f2328;
+  --btn-ghost-border: rgba(15, 23, 42, 0.14);
+  --btn-ghost-bg-hover: #e8ecf0;
+  --btn-ghost-border-hover: rgba(15, 23, 42, 0.30);
+
+  --btn-muted-text: #8b949e;
+  --btn-muted-border: rgba(15, 23, 42, 0.10);
+}
+
+a { color: inherit; }
+
+/* ── Shared utilities ──────────────────────────────────────────────────────────
+   Both of these serve the copy-to-clipboard pattern in main.js, which rides on every
+   page: a hidden element holding the exact text, and the green flash on success (the
+   site's copy feedback — never a toast). They lived in docs.css until the landing grew
+   a copy button of its own, and the landing does not load that sheet. */
+.copy-btn.is-copied,
+.copy-btn.is-copied .icon { color: var(--success); border-color: var(--success); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }

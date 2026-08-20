@@ -1,0 +1,582 @@
+/* =========================
+   Spintax – DOCS PAGES
+   Article typography & layout
+   ========================= */
+
+/* Header: breadcrumb + theme toggle in one row */
+.docs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+}
+
+/* Breadcrumb nav */
+.docs-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.docs-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.docs-nav a:hover {
+  color: var(--text-main);
+}
+
+.docs-nav__home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.docs-nav__sep {
+  color: var(--text-subtle);
+}
+
+/* Article */
+.docs-article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: var(--space-6);
+}
+
+.docs-article h1 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-3);
+}
+
+.docs-article .docs-lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 var(--space-6);
+}
+
+.docs-article h2 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  line-height: 1.25;
+  margin: var(--space-6) 0 var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.docs-article h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.docs-article h3 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  line-height: 1.3;
+  margin: var(--space-5) 0 var(--space-2);
+}
+
+.docs-article p {
+  font-size: var(--fs-md);
+  line-height: 1.7;
+  margin: 0 0 var(--space-4);
+}
+
+.docs-article ul,
+.docs-article ol {
+  margin: 0 0 var(--space-4);
+  padding-left: 1.5em;
+}
+
+.docs-article li {
+  font-size: var(--fs-md);
+  line-height: 1.7;
+  margin-bottom: var(--space-2);
+}
+
+.docs-article li strong {
+  font-weight: var(--fw-semibold);
+}
+
+/* Inline code */
+.docs-article code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.15em 0.4em;
+  word-break: break-word;
+}
+
+/* Code blocks */
+.docs-article pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  overflow-x: auto;
+  margin: 0 0 var(--space-4);
+}
+
+.docs-article pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+/* Syntax highlighting spans inside code blocks */
+.docs-article pre .s-enum { color: var(--blue-300); }
+.docs-article pre .s-perm { color: var(--gold-300); }
+.docs-article pre .s-var  { color: var(--magenta-300); }
+.docs-article pre .s-cond { color: var(--magenta-300); font-weight: 600; }
+.docs-article pre .s-dir  { color: var(--text-subtle); }
+.docs-article pre .s-comment { color: var(--text-subtle); font-style: italic; }
+
+:root[data-theme="light"] .docs-article pre .s-enum { color: var(--blue-700); }
+:root[data-theme="light"] .docs-article pre .s-perm { color: var(--gold-900); }
+:root[data-theme="light"] .docs-article pre .s-var  { color: var(--magenta-700); }
+:root[data-theme="light"] .docs-article pre .s-cond { color: var(--magenta-700); }
+
+/* Inline syntax mentions, the highlight legend, and the plural token (used in prose,
+   legend swatches and the full-template block on /examples/). Mirrors the pre colours. */
+.docs-article .s-enum { color: var(--blue-300); }
+.docs-article .s-perm { color: var(--gold-300); }
+.docs-article .s-var  { color: var(--magenta-300); }
+.docs-article .s-cond { color: var(--magenta-300); font-weight: 600; }
+.docs-article .s-plural { color: var(--success); }
+.docs-article .s-dir  { color: var(--text-subtle); }
+:root[data-theme="light"] .docs-article .s-enum { color: var(--blue-700); }
+:root[data-theme="light"] .docs-article .s-perm { color: var(--gold-900); }
+:root[data-theme="light"] .docs-article .s-var  { color: var(--magenta-700); }
+:root[data-theme="light"] .docs-article .s-cond { color: var(--magenta-700); }
+
+/* /examples/ — full template block, colour legend, three-render stack, copy button */
+.docs-article .tpl-full { max-height: 32rem; overflow: auto; }
+.hl-legend__title { margin: var(--space-4) 0 var(--space-2); color: var(--text-muted); font-size: var(--fs-sm); }
+.hl-legend { list-style: none; padding: 0; margin: 0 0 var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); }
+.hl-legend li { font-size: var(--fs-sm); color: var(--text-muted); }
+.hl-legend code { background: var(--code-bg); border: 1px solid var(--code-border); border-radius: 4px; padding: 0 .35em; margin-inline-end: .4em; }
+.docs-note { font-size: var(--fs-sm); color: var(--text-muted); }
+
+/* Product screenshot (Spintax Studio on /spintax-editor/). Two files exist, light and dark,
+   but only one is ever fetched: main.js rewrites src inside its theme apply(), because the
+   site's own toggle — not the OS preference — decides which frame is right. */
+.shot { margin: var(--space-5) 0 var(--space-4); }
+.shot__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-subtle);
+  /* Same frame as a card or a playground field — --radius-lg, not the xs it used to carry.
+     The larger radius clips the screenshot's own square corners, which is where the capture's
+     edge artefacts live. */
+  border-radius: var(--radius-lg);
+}
+/* .copy-btn.is-copied and .visually-hidden moved to theme.css when the landing grew a copy
+   button of its own — the landing does not load this sheet. */
+
+/* Tables — scrollable on mobile */
+.docs-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 0 var(--space-4);
+}
+
+.docs-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 var(--space-4);
+  font-size: var(--fs-sm);
+  min-width: 480px;
+}
+
+.docs-article th,
+.docs-article td {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.docs-article th {
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Links */
+.docs-article a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.docs-article a:hover {
+  color: var(--primary-hover);
+}
+
+/* Buttons inside articles — override link color and underline */
+.docs-article a.btn {
+  text-decoration: none;
+}
+
+.docs-article a.btn--accent {
+  color: var(--btn-accent-text) !important;
+}
+
+.docs-article a.btn--primary {
+  color: var(--btn-primary-text) !important;
+}
+
+.docs-article a.btn--ghost {
+  color: var(--btn-ghost-text) !important;
+}
+
+/* Horizontal rule */
+.docs-article hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: var(--space-6) 0;
+}
+
+/* Blockquotes */
+.docs-article blockquote {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--primary);
+  background: var(--bg-soft);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  color: var(--text-muted);
+  font-size: var(--fs-md);
+}
+
+.docs-article blockquote p {
+  margin: 0;
+}
+
+/* Callout boxes */
+.callout {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-4);
+  margin: 0 0 var(--space-4);
+}
+
+.callout--ai {
+  border-left-color: var(--gold-400, var(--gold-300));
+  background: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--gold-300) 8%, var(--bg-soft)),
+    var(--bg-soft)
+  );
+}
+
+.callout--warn {
+  border-left-color: var(--magenta-300);
+}
+
+.callout > *:first-child {
+  margin-top: 0;
+}
+
+.callout > *:last-child {
+  margin-bottom: 0;
+}
+
+.callout__heading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-2);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+}
+
+.callout__heading .icon {
+  color: var(--gold-300);
+}
+
+.callout--warn .callout__heading .icon {
+  color: var(--magenta-300);
+}
+
+/* Checklist */
+.docs-checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.docs-checklist li {
+  position: relative;
+  padding-left: 1.75em;
+}
+
+.docs-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 1.1em;
+  height: 1.1em;
+  border: 1.5px solid var(--border-strong, var(--border-subtle));
+  border-radius: var(--radius-xs);
+  background: transparent;
+}
+
+/* Related guides grid at end of article */
+.related-guides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0 var(--space-6);
+  /* All these cards are Authoring-guide entries — the gold section in the docs hub. */
+  --glyph-color: var(--glyph-gold);
+}
+
+.related-guides a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-soft);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--text-main);
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.related-guides a:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  color: var(--text-main);
+}
+
+/* Smaller than the docs-hub 7rem glyph — these cards are more compact. The copy
+   paints on top (position:relative), the faded glyph is background texture. */
+.related-guides .doc-card__glyph {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.related-guides a strong {
+  position: relative;
+  display: block;
+  margin-bottom: var(--space-1);
+  color: var(--primary);
+}
+
+.related-guides a span {
+  position: relative;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+/* Related links at bottom */
+.docs-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.docs-links a {
+  text-decoration: none;
+}
+
+/* =========================
+   Mobile
+   ========================= */
+@media (max-width: 480px) {
+  .docs-article h1 {
+    font-size: 1.5rem;
+  }
+
+  .docs-article table {
+    font-size: var(--fs-xs);
+  }
+
+  .docs-article th,
+  .docs-article td {
+    padding: var(--space-1) var(--space-2);
+  }
+}
+
+/* =========================
+   DOCS HUB — sectioned card index
+   Wide cards with a decorative, faded topic glyph (ported from 301-ui /
+   301.sh). The glyph reuses each card's own sprite icon as a barely-visible
+   background texture; the copy paints on top. Purely ornamental: aria-hidden,
+   and dropped on narrow screens where there is no room for it.
+   ========================= */
+.docs-index {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.docs-section__title {
+  margin: 0 0 var(--space-4);
+  padding-block-end: var(--space-2);
+  border-block-end: 1px solid var(--border-subtle);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-subtle);
+}
+
+.docs-section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 48rem) {
+  .docs-section__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Per-section glyph accent — set the token on the section, the cards inherit it. */
+.docs-section--blue    { --glyph-color: var(--glyph-blue); }
+.docs-section--gold    { --glyph-color: var(--glyph-gold); }
+.docs-section--magenta { --glyph-color: var(--glyph-magenta); }
+
+.doc-card {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: var(--space-5);
+  background: var(--panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  text-decoration: none;
+  transition:
+    border-color var(--transition-md),
+    box-shadow var(--transition-md),
+    transform var(--transition-md);
+}
+
+.doc-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-subtle);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .doc-card:hover { transform: translateY(-2px); }
+}
+
+.doc-card__glyph {
+  position: absolute;
+  top: 50%;
+  inset-inline-end: var(--space-4);
+  width: 7rem;
+  height: 7rem;
+  transform: translateY(-50%);
+  /* The mono sprite paths carry NO fill attribute, so fill defaults to black
+     unless set here (the .icon class we deliberately omit is what normally
+     supplies it). Drive fill — not just color — off the accent token. */
+  fill: var(--glyph-color, var(--text-main));
+  color: var(--glyph-color, var(--text-main));
+  opacity: var(--glyph-opacity);
+  filter: blur(0.5px);
+  pointer-events: none;
+}
+
+.doc-card__title {
+  position: relative;
+  margin: 0;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  color: var(--text-main);
+  transition: color var(--transition-fast);
+}
+
+.doc-card:hover .doc-card__title { color: var(--primary-hover); }
+
+.doc-card__text {
+  position: relative;
+  margin: var(--space-3) 0 0;
+  max-width: var(--measure);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Beat the .docs-article prose-link underline for the whole card (same pattern
+   as a.btn above) — otherwise the title and excerpt inherit the link underline. */
+.docs-article a.doc-card,
+.docs-article a.doc-card:hover {
+  text-decoration: none;
+}
+
+/* ── Diagrams ── (ported from 301-ui / 301.sh)
+   Pre-rendered from diagrams/*.mmd at authoring time (scripts/build-diagrams.mjs).
+   The SVG's colours are CSS variables, so it follows the theme instead of being
+   baked to one. Diagrams render at natural size (useMaxWidth: false) — scaling a
+   flowchart down to the column shrinks every label — so wide ones scroll inside
+   .diagram__canvas, and on a wide screen the figure is allowed out of the 720px
+   reading column. Symmetric negative margins, NOT `left: 50%` with a transform:
+   the transform moves the element visually but leaves its layout box where the
+   offset put it, which silently extends the page's scrollable width. */
+.docs-article .diagram {
+  width: 100%;
+  margin: var(--space-5) 0;
+}
+
+@media (min-width: 64rem) {
+  .docs-article .diagram {
+    width: 56rem;
+    margin-inline: calc((100% - 56rem) / 2);
+  }
+}
+
+.docs-article .diagram__canvas {
+  padding: var(--space-4);
+  overflow-x: auto;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+}
+
+.docs-article .diagram svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.docs-article .diagram figcaption {
+  margin-top: var(--space-2);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+/* ── Docs-hub backdrop ──
+   Static hive lattice (hexagons-lite, bond-fused cells — src/client/docs-bg.ts),
+   drawn once on idle. z-index -1 sits above the body's background paint but below
+   all content; the muting knob is this opacity, softer on light. */
+.docs-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: .5;
+  pointer-events: none;
+}
+
+html[data-theme='light'] .docs-bg {
+  opacity: .3;
+}

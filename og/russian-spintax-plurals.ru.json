@@ -1,0 +1,11 @@
+{
+  "slug": "russian-spintax-plurals",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Любой существующий spintax-движок ломает русские числа. Грамматическое правило требует арифметики по модулю; ни условные gate-ы, ни closed-set хаки его не выражают. Что ломается, почему, и какой примитив это закрывает.",
+  "bytes": 100786,
+  "sha256": "0d69aaa4c20b0108"
+}
