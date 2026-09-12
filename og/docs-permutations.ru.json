@@ -1,0 +1,11 @@
+{
+  "slug": "docs-permutations",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Подробный разбор перестановок: синтаксис, конфигурация сепараторов, переопределение для элемента, серийные списки в заголовках, типичные ошибки.",
+  "bytes": 101966,
+  "sha256": "f210d92ab9cefdee"
+}

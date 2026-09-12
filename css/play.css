@@ -1,0 +1,565 @@
+/* =========================
+   Spintax Playground
+   ========================= */
+
+.play {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 var(--space-6);
+}
+
+.play__header {
+  margin-bottom: var(--space-4);
+}
+
+.play__header h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-2);
+}
+
+.play__header .docs-lead {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 68ch;
+}
+
+/* ── Action bar ────────────────────────────────────────────── */
+
+.play__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding: var(--space-3);
+  background: var(--bg-soft);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.play__field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.play__field span {
+  white-space: nowrap;
+}
+
+.play__field input {
+  font-family: inherit;
+  font-size: var(--fs-sm);
+  padding: 0.35em 0.6em;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  background: var(--bg-main, var(--bg-soft));
+  color: var(--text-main);
+  min-width: 0;
+  max-width: 8rem;
+}
+
+.play__field input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+.play__field input[type="number"] {
+  width: 4.5rem;
+  text-align: center;
+}
+
+/* ── Grid layout ───────────────────────────────────────────── */
+
+.play__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .play__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.play__input,
+.play__output {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.play__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.play__block-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.play__block-label {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.play__hint {
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.play__hint code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  padding: 0.1em 0.35em;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+}
+
+/* ── Tabs (for vars mode switch) ──────────────────────────── */
+
+.play__tabs {
+  display: inline-flex;
+  gap: 2px;
+  background: var(--bg-main, var(--bg-soft));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 2px;
+}
+
+.play__tab {
+  font-family: inherit;
+  font-size: var(--fs-xs);
+  padding: 0.3em 0.75em;
+  background: transparent;
+  color: var(--text-muted);
+  border: 0;
+  border-radius: calc(var(--radius-xs) - 1px);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.play__tab:hover {
+  color: var(--text-main);
+}
+
+.play__tab.is-active {
+  background: var(--primary);
+  color: var(--btn-primary-text, #fff);
+}
+
+.play__tab:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ── Editor: textarea + overlay pattern ───────────────────── */
+
+.editor {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+}
+
+.editor__overlay,
+.editor__textarea {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  min-height: 220px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  tab-size: 2;
+}
+
+.editor__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  color: var(--text-main);
+  background: var(--code-bg);
+  overflow: auto;
+  z-index: 1;
+}
+
+.editor__textarea {
+  position: relative;
+  background: transparent;
+  color: transparent;
+  caret-color: var(--text-main);
+  resize: vertical;
+  z-index: 2;
+  min-height: 220px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.editor__textarea::selection {
+  background: color-mix(in srgb, var(--primary) 45%, transparent);
+}
+
+.editor__textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.editor__textarea:focus + .editor__overlay,
+.editor__textarea:focus ~ .editor__overlay {
+  /* overlay is a previous sibling in our markup; adjust if DOM changes */
+}
+
+/* Wavy underline for issues in the overlay: magenta = error, gold = warning. */
+.err {
+  text-decoration: underline wavy var(--magenta-300);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.warn {
+  text-decoration: underline wavy var(--gold, #d6af3c);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+/* ── Variables editor ─────────────────────────────────────── */
+
+.vars__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.vars__row {
+  display: grid;
+  grid-template-columns: auto minmax(6rem, 1fr) minmax(0, 2fr) auto;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.vars__name,
+.vars__value,
+.vars__dir {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  padding: 0.4em 0.6em;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  background: var(--code-bg);
+  color: var(--text-main);
+  min-width: 0;
+}
+
+.vars__name:focus,
+.vars__value:focus,
+.vars__dir:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+/* The directive picker carries real semantics (#set re-rolls, #def holds),
+   so it sits inline with the name it governs rather than in a settings pane. */
+.vars__dir {
+  cursor: pointer;
+  padding-inline: 0.4em;
+}
+
+.vars__remove {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.3em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.vars__remove:hover {
+  color: var(--magenta-300);
+  border-color: var(--magenta-300);
+}
+
+.vars__remove:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.vars__add {
+  align-self: flex-start;
+}
+
+.vars__raw {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding: var(--space-3);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--code-bg);
+  color: var(--text-main);
+  min-height: 140px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.vars__raw:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+/* ── Output: variants list ────────────────────────────────── */
+
+.variants {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.variants__empty {
+  padding: var(--space-4);
+  background: var(--bg-soft);
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+
+.variant {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.variant__head {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: var(--space-2) var(--space-3);
+  color: var(--text-muted);
+  background: var(--bg-main, transparent);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.variant__body {
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--text-main);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* ── Error banner ─────────────────────────────────────────── */
+
+.error-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: color-mix(in srgb, var(--magenta-300) 10%, var(--bg-soft));
+  border: 1px solid var(--magenta-300);
+  border-left-width: 3px;
+  border-radius: var(--radius-lg);
+}
+
+.error-banner .icon {
+  color: var(--magenta-300);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.error-banner__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.error-banner__title {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--magenta-300);
+}
+
+.error-banner__message {
+  font-size: var(--fs-sm);
+  color: var(--text-main);
+  word-wrap: break-word;
+}
+
+/* ── Copy-link feedback ────────────────────────────────────── */
+
+.btn.is-copied .icon {
+  color: var(--success);
+  transition: color 0.2s;
+}
+
+/* ── Telegram bot cross-link (@spintaxnetbot) ─────────────── */
+
+.play__bot {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  background: color-mix(in srgb, var(--primary) 8%, var(--bg-soft));
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, var(--border-subtle));
+  border-radius: var(--radius-lg);
+}
+
+.play__bot-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary) 15%, transparent);
+  color: var(--primary);
+}
+
+.play__bot-icon .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.play__bot-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.play__bot-title {
+  display: block;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.play__bot-text {
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.play__bot-text code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--code-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.1em 0.35em;
+  color: var(--text-main);
+}
+
+.play__bot-text a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.play__bot-cta {
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .play__bot {
+    flex-wrap: wrap;
+  }
+  .play__bot-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ── Help panel ────────────────────────────────────────────── */
+
+.play__help {
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  background: var(--bg-soft);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.play__help-title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  margin: 0 0 var(--space-2);
+}
+
+.play__help ul {
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  margin: 0 0 var(--space-2);
+  padding-left: 1.4em;
+}
+
+.play__help li code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--code-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.1em 0.35em;
+}
+
+.play__help p {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.play__help a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Utility ───────────────────────────────────────────────── */
+
+.hidden {
+  display: none !important;
+}

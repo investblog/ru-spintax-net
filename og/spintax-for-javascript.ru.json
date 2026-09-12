@@ -1,0 +1,11 @@
+{
+  "slug": "spintax-for-javascript",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Независимый от фреймворка движок spintax для JS/TS. Парсинг, рендер, валидация, извлечение переменных и нейтрализация шаблонов на Cloudflare Workers, Node 18+ и в браузере. Ноль зависимостей, MIT, на npm как @spintax/core.",
+  "bytes": 117700,
+  "sha256": "55114e9fa8ccd996"
+}

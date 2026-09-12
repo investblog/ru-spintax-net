@@ -1,0 +1,21 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://spintax.net/mcp",
+      "service-desc": [
+        {
+          "href": "https://spintax.net/.well-known/mcp.json",
+          "type": "application/json",
+          "title": "MCP Server Card"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://spintax.net/llms.txt",
+          "type": "text/plain",
+          "title": "spintax.net documentation index"
+        }
+      ]
+    }
+  ]
+}
