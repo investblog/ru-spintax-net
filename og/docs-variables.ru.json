@@ -1,0 +1,11 @@
+{
+  "slug": "docs-variables",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Как переменные превращают один spintax-шаблон в сеть сайтов. Приоритет, составные переменные, ловушка повторного решения, коллизии сепараторов.",
+  "bytes": 102168,
+  "sha256": "b7bf2bfde16a13b7"
+}
