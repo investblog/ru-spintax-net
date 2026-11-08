@@ -1,0 +1,11 @@
+{
+  "slug": "spintax-plural-design-trace",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Как проектировался примитив согласования с числом: анализ стоимости на реальных данных Generator, решения до кода и сверка рабочей реализации со спекой.",
+  "bytes": 113576,
+  "sha256": "023db994f2549da4"
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "docs-plural-spintax",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Выбор нужной формы существительного по числу: 3 формы для RU/UK/BE и SR/HR/BS, 2 для английского типа. Синтаксис, краевые случаи, пример, сравнение с ICU.",
+  "bytes": 93869,
+  "sha256": "c979853242db4867"
+}

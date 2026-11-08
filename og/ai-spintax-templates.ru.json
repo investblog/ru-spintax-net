@@ -1,0 +1,11 @@
+{
+  "slug": "ai-spintax-templates",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Spintax-шаблоны с ИИ: Spintax Studio сам пишет черновик и проверяет его, или подключите модель через чат, скилл или MCP. Плюс девять типичных ошибок моделей.",
+  "bytes": 88734,
+  "sha256": "9a0b7d1c3bc8a833"
+}

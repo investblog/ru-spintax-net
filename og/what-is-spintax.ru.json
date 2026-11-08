@@ -1,0 +1,11 @@
+{
+  "slug": "what-is-spintax",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Spintax — язык шаблонов: логику вариаций пишут один раз (вы или ИИ), а движок рендерит тысячи уникальных, детерминированных вариантов почти бесплатно.",
+  "bytes": 97904,
+  "sha256": "688426ee6cfbcf5d"
+}

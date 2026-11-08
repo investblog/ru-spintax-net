@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+  <title>Spintax — статьи</title>
+  <link>https://ru.spintax.net/</link>
+  <description>Синтаксис spintax, гайды по написанию шаблонов и семейство открытых движков — статьи с spintax.net.</description>
+  <language>ru</language>
+  <atom:link href="https://ru.spintax.net/rss.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Что такое Spintax? Один источник — уникальный контент в масштабе</title>
+    <link>https://ru.spintax.net/what-is-spintax/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/what-is-spintax/</guid>
+    <description>Spintax — язык шаблонов: логику вариаций пишут один раз (вы или ИИ), а движок рендерит тысячи уникальных, детерминированных вариантов почти бесплатно.
+
+https://ru.spintax.net/what-is-spintax/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/what-is-spintax.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/what-is-spintax.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Движки spintax: один синтаксис для JS, PHP, Python, Pascal и .NET</title>
+    <link>https://ru.spintax.net/spintax-engines/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/spintax-engines/</guid>
+    <description>Open-source движки spintax, сверенные по эталонному корпусу: npm, Packagist, PyPI, NuGet и движок на Free Pascal. Ноль зависимостей, MIT, один синтаксис.
+
+https://ru.spintax.net/spintax-engines/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/spintax-engines.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/spintax-engines.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Spintax на примере: превращаем готовый текст в шаблон</title>
+    <link>https://ru.spintax.net/examples/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/examples/</guid>
+    <description>Разбор spintax на примере: наш же блок «О Spintax» с главной превращён в один шаблон — переменные, перестановки, условия, падежи — с настоящими рендерами.
+
+https://ru.spintax.net/examples/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/examples.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/examples.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Вложенный Spintax: почему глубина имеет значение</title>
+    <link>https://ru.spintax.net/docs/nested-spintax/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/docs/nested-spintax/</guid>
+    <description>Как вложенный spintax даёт экспоненциальное число вариантов контента: произвольная глубина вложенности, межэлементная композиция и умная постобработка.
+
+https://ru.spintax.net/docs/nested-spintax/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/docs-nested-spintax.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/docs-nested-spintax.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Сколько стоит контент, который пишет ИИ? Цифры 2026 года</title>
+    <link>https://ru.spintax.net/ai-content-costs/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/ai-content-costs/</guid>
+    <description>Реальная цена одной статьи у Claude, GPT, Gemini, Grok, DeepSeek, Qwen, Kimi и Mistral в августе 2026 — и что меняют prompt-кэш и batch-скидки.
+
+https://ru.spintax.net/ai-content-costs/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/ai-content-costs.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/ai-content-costs.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Как писать spintax-шаблоны с ИИ</title>
+    <link>https://ru.spintax.net/ai-spintax-templates/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/ai-spintax-templates/</guid>
+    <description>Spintax-шаблоны с ИИ: Spintax Studio сам пишет черновик и проверяет его, или подключите модель через чат, скилл или MCP. Плюс девять типичных ошибок моделей.
+
+https://ru.spintax.net/ai-spintax-templates/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/ai-spintax-templates.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/ai-spintax-templates.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Редактор spintax — Studio, VS Code, Sublime и онлайн-песочница</title>
+    <link>https://ru.spintax.net/spintax-editor/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/spintax-editor/</guid>
+    <description>Где писать и проверять spintax: Spintax Studio — бесплатный офлайн-редактор для Windows, подсветка для VS Code и Sublime Text и песочница в браузере.
+
+https://ru.spintax.net/spintax-editor/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/spintax-editor.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/spintax-editor.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Spintax в холодных рассылках: сколько вариантов на самом деле</title>
+    <link>https://ru.spintax.net/spintax-for-cold-email/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/spintax-for-cold-email/</guid>
+    <description>Сервисы рассылок понимают только плоский {a|b|c}. Перестановки, условия и плюралы поднимают одно письмо с 59 049 вариантов до 8,5 млн — с замерами.
+
+https://ru.spintax.net/spintax-for-cold-email/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/spintax-for-cold-email.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/spintax-for-cold-email.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Spintax для n8n: уникальный текст для каждого лида и товара</title>
+    <link>https://ru.spintax.net/spintax-for-n8n/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/spintax-for-n8n/</guid>
+    <description>Практический гайд по spintax-ноде для n8n: уникальное холодное письмо на каждого лида или своё описание товара на каждую витрину, а шаблон пишет ваша LLM.
+
+https://ru.spintax.net/spintax-for-n8n/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/spintax-for-n8n.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/spintax-for-n8n.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Обратный порядок написания: текст сначала, разметка в конце</title>
+    <link>https://ru.spintax.net/docs/authoring-mindset/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/docs/authoring-mindset/</guid>
+    <description>Ментальная модель написания spintax-шаблонов, которые читаются в любой из тысяч сборок. Сначала готовая статья — потом разметка.
+
+https://ru.spintax.net/docs/authoring-mindset/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/docs-authoring-mindset.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/docs-authoring-mindset.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Переменные и переиспользование: множитель Spintax</title>
+    <link>https://ru.spintax.net/docs/variables/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/docs/variables/</guid>
+    <description>Как переменные превращают один spintax-шаблон в сеть сайтов. Приоритет, составные переменные, ловушка повторного решения, коллизии сепараторов.
+
+https://ru.spintax.net/docs/variables/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/docs-variables.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/docs-variables.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Перестановки на практике: списки, заголовки, сепараторы</title>
+    <link>https://ru.spintax.net/docs/permutations/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/docs/permutations/</guid>
+    <description>Подробный разбор перестановок: синтаксис, конфигурация сепараторов, переопределение для элемента, серийные списки в заголовках, типичные ошибки.
+
+https://ru.spintax.net/docs/permutations/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/docs-permutations.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/docs-permutations.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Условный spintax: {?VAR?then|else}</title>
+    <link>https://ru.spintax.net/docs/conditional-spintax/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/docs/conditional-spintax/</guid>
+    <description>Ветвление по значению в spintax-шаблонах. Три формы, правила truthy/falsy, двухпроходный пайплайн, и чем условие отличается от случайного выбора в {a|b}.
+
+https://ru.spintax.net/docs/conditional-spintax/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/docs-conditional-spintax.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/docs-conditional-spintax.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Грамматически безопасный spintax: русские падежи и не только</title>
+    <link>https://ru.spintax.net/docs/grammar-safe-spintax/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/docs/grammar-safe-spintax/</guid>
+    <description>Как синонимизировать spintax-шаблоны, не ломая грамматику: правила связывания, английское согласование, русские падежи, род, управление и квантификаторы.
+
+https://ru.spintax.net/docs/grammar-safe-spintax/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/docs-grammar-safe-spintax.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/docs-grammar-safe-spintax.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Композиция шаблонов: переменная как готовая часть страницы</title>
+    <link>https://ru.spintax.net/docs/template-composition/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/docs/template-composition/</guid>
+    <description>Когда один большой шаблон перестаёт работать, его разбивают на маленькие, связанные переменными с готовым HTML. Разбор на примере страницы способов оплаты.
+
+https://ru.spintax.net/docs/template-composition/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/docs-template-composition.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/docs-template-composition.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Согласование с числом: {plural N: form|…}</title>
+    <link>https://ru.spintax.net/docs/plural-spintax/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/docs/plural-spintax/</guid>
+    <description>Выбор нужной формы существительного по числу: 3 формы для RU/UK/BE и SR/HR/BS, 2 для английского типа. Синтаксис, краевые случаи, пример, сравнение с ICU.
+
+https://ru.spintax.net/docs/plural-spintax/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/docs-plural-spintax.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/docs-plural-spintax.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Починка spintax-шаблонов: по рецепту, а не переписыванием</title>
+    <link>https://ru.spintax.net/docs/repairing-spintax/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/docs/repairing-spintax/</guid>
+    <description>Как починить spintax-шаблон, который всё ещё рендерит брак: найти дефект, применить один именованный рецепт его класса, перепроверить. Рецепты по кодам линта.
+
+https://ru.spintax.net/docs/repairing-spintax/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/docs-repairing-spintax.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/docs-repairing-spintax.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Spintax для JavaScript и TypeScript — open-source движок @spintax/core</title>
+    <link>https://ru.spintax.net/spintax-for-javascript/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/spintax-for-javascript/</guid>
+    <description>Движок spintax для JS/TS без привязки к фреймворку: парсинг, рендер, валидация и нейтрализация шаблонов в Node 18+, Workers и браузере. MIT, ноль зависимостей.
+
+https://ru.spintax.net/spintax-for-javascript/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/spintax-for-javascript.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/spintax-for-javascript.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Spintax для PHP — open-source движок spintax/core</title>
+    <link>https://ru.spintax.net/spintax-for-php/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/spintax-for-php/</guid>
+    <description>Open-source движок spintax для PHP 8.0+: перечисления, перестановки, переменные, условия, плюралы и include. Ноль зависимостей, MIT, на Packagist.
+
+https://ru.spintax.net/spintax-for-php/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/spintax-for-php.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/spintax-for-php.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>Русский spintax: почему ваши числа всегда выглядят криво</title>
+    <link>https://ru.spintax.net/russian-spintax-plurals/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/russian-spintax-plurals/</guid>
+    <description>Любой существующий spintax-движок ломает русские числа: правилу нужна арифметика по модулю, а условные хаки её не выражают. Что ломается и чем это чинится.
+
+https://ru.spintax.net/russian-spintax-plurals/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/russian-spintax-plurals.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/russian-spintax-plurals.ru.png" medium="image" type="image/png"/>
+  </item>
+  <item>
+    <title>От боли к примитиву: как Spintax получил согласование с числом</title>
+    <link>https://ru.spintax.net/spintax-plural-design-trace/</link>
+    <guid isPermaLink="true">https://ru.spintax.net/spintax-plural-design-trace/</guid>
+    <description>Как проектировался примитив согласования с числом: анализ стоимости на реальных данных Generator, решения до кода и сверка рабочей реализации со спекой.
+
+https://ru.spintax.net/spintax-plural-design-trace/</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <enclosure url="https://ru.spintax.net/og/spintax-plural-design-trace.ru.png" type="image/png" length="0"/>
+    <media:content url="https://ru.spintax.net/og/spintax-plural-design-trace.ru.png" medium="image" type="image/png"/>
+  </item>
+</channel>
+</rss>

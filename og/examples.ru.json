@@ -1,0 +1,11 @@
+{
+  "slug": "examples",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Разбор spintax на примере: наш же блок «О Spintax» с главной превращён в один шаблон — переменные, перестановки, условия, падежи — с настоящими рендерами.",
+  "bytes": 103684,
+  "sha256": "d9da4787be0b9711"
+}

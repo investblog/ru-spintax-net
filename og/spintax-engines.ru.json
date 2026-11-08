@@ -1,0 +1,11 @@
+{
+  "slug": "spintax-engines",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Open-source движки spintax, сверенные по эталонному корпусу: npm, Packagist, PyPI, NuGet и движок на Free Pascal. Ноль зависимостей, MIT, один синтаксис.",
+  "bytes": 97985,
+  "sha256": "3469a7c30c798eb7"
+}

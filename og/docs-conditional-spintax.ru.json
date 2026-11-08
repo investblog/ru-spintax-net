@@ -1,0 +1,11 @@
+{
+  "slug": "docs-conditional-spintax",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Ветвление по значению в spintax-шаблонах. Три формы, правила truthy/falsy, двухпроходный пайплайн, и чем условие отличается от случайного выбора в {a|b}.",
+  "bytes": 84160,
+  "sha256": "f67a0e9b337823a9"
+}

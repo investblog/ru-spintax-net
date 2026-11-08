@@ -1,0 +1,11 @@
+{
+  "slug": "docs-repairing-spintax",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Как починить spintax-шаблон, который всё ещё рендерит брак: найти дефект, применить один именованный рецепт его класса, перепроверить. Рецепты по кодам линта.",
+  "bytes": 105208,
+  "sha256": "1175e28a32261799"
+}

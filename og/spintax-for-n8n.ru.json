@@ -1,0 +1,11 @@
+{
+  "slug": "spintax-for-n8n",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Практический гайд по spintax-ноде для n8n: уникальное холодное письмо на каждого лида или своё описание товара на каждую витрину, а шаблон пишет ваша LLM.",
+  "bytes": 111266,
+  "sha256": "a7bfecdf9e644ed7"
+}

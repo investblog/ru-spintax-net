@@ -1,0 +1,11 @@
+{
+  "slug": "docs-template-composition",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Когда один большой шаблон перестаёт работать, его разбивают на маленькие, связанные переменными с готовым HTML. Разбор на примере страницы способов оплаты.",
+  "bytes": 112914,
+  "sha256": "5ebcaf327ea7b01d"
+}

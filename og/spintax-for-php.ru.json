@@ -1,0 +1,11 @@
+{
+  "slug": "spintax-for-php",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Open-source движок spintax для PHP 8.0+: перечисления, перестановки, переменные, условия, плюралы и include. Ноль зависимостей, MIT, на Packagist.",
+  "bytes": 103900,
+  "sha256": "ef93872f5d4c8a0a"
+}

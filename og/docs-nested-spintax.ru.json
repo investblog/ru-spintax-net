@@ -1,0 +1,11 @@
+{
+  "slug": "docs-nested-spintax",
+  "lang": "ru",
+  "profile": "landscape",
+  "width": 1200,
+  "height": 630,
+  "template": "spintax-og-landscape",
+  "alt": "Как вложенный spintax даёт экспоненциальное число вариантов контента: произвольная глубина вложенности, межэлементная композиция и умная постобработка.",
+  "bytes": 105634,
+  "sha256": "f7982fd0256dae8c"
+}

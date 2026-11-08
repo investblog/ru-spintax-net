@@ -1,0 +1,296 @@
+{
+  "posts": [
+    {
+      "slug": "what-is-spintax",
+      "title": "Что такое Spintax? Один источник — уникальный контент в масштабе",
+      "description": "Spintax — язык шаблонов: логику вариаций пишут один раз (вы или ИИ), а движок рендерит тысячи уникальных, детерминированных вариантов почти бесплатно.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/what-is-spintax/",
+      "image": "https://ru.spintax.net/og/what-is-spintax.ru.png",
+      "tags": [
+        "spintax",
+        "ai-content",
+        "seo"
+      ],
+      "crosspost": true
+    },
+    {
+      "slug": "spintax-engines",
+      "title": "Движки spintax: один синтаксис для JS, PHP, Python, Pascal и .NET",
+      "description": "Open-source движки spintax, сверенные по эталонному корпусу: npm, Packagist, PyPI, NuGet и движок на Free Pascal. Ноль зависимостей, MIT, один синтаксис.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/spintax-engines/",
+      "image": "https://ru.spintax.net/og/spintax-engines.ru.png",
+      "tags": [
+        "spintax",
+        "engines",
+        "opensource"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "examples",
+      "title": "Spintax на примере: превращаем готовый текст в шаблон",
+      "description": "Разбор spintax на примере: наш же блок «О Spintax» с главной превращён в один шаблон — переменные, перестановки, условия, падежи — с настоящими рендерами.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/examples/",
+      "image": "https://ru.spintax.net/og/examples.ru.png",
+      "tags": [
+        "spintax",
+        "example",
+        "template"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "docs-nested-spintax",
+      "title": "Вложенный Spintax: почему глубина имеет значение",
+      "description": "Как вложенный spintax даёт экспоненциальное число вариантов контента: произвольная глубина вложенности, межэлементная композиция и умная постобработка.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/docs/nested-spintax/",
+      "image": "https://ru.spintax.net/og/docs-nested-spintax.ru.png",
+      "tags": [
+        "spintax",
+        "nested",
+        "syntax"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "ai-content-costs",
+      "title": "Сколько стоит контент, который пишет ИИ? Цифры 2026 года",
+      "description": "Реальная цена одной статьи у Claude, GPT, Gemini, Grok, DeepSeek, Qwen, Kimi и Mistral в августе 2026 — и что меняют prompt-кэш и batch-скидки.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/ai-content-costs/",
+      "image": "https://ru.spintax.net/og/ai-content-costs.ru.png",
+      "tags": [
+        "ai-content",
+        "llm",
+        "cost"
+      ],
+      "crosspost": true
+    },
+    {
+      "slug": "ai-spintax-templates",
+      "title": "Как писать spintax-шаблоны с ИИ",
+      "description": "Spintax-шаблоны с ИИ: Spintax Studio сам пишет черновик и проверяет его, или подключите модель через чат, скилл или MCP. Плюс девять типичных ошибок моделей.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/ai-spintax-templates/",
+      "image": "https://ru.spintax.net/og/ai-spintax-templates.ru.png",
+      "tags": [
+        "spintax",
+        "ai-content",
+        "workflow"
+      ],
+      "crosspost": true
+    },
+    {
+      "slug": "spintax-editor",
+      "title": "Редактор spintax — Studio, VS Code, Sublime и онлайн-песочница",
+      "description": "Где писать и проверять spintax: Spintax Studio — бесплатный офлайн-редактор для Windows, подсветка для VS Code и Sublime Text и песочница в браузере.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/spintax-editor/",
+      "image": "https://ru.spintax.net/og/spintax-editor.ru.png",
+      "tags": [
+        "spintax",
+        "studio",
+        "windows"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "spintax-for-cold-email",
+      "title": "Spintax в холодных рассылках: сколько вариантов на самом деле",
+      "description": "Сервисы рассылок понимают только плоский {a|b|c}. Перестановки, условия и плюралы поднимают одно письмо с 59 049 вариантов до 8,5 млн — с замерами.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/spintax-for-cold-email/",
+      "image": "https://ru.spintax.net/og/spintax-for-cold-email.ru.png",
+      "tags": [
+        "spintax",
+        "email",
+        "outreach"
+      ],
+      "crosspost": true
+    },
+    {
+      "slug": "spintax-for-n8n",
+      "title": "Spintax для n8n: уникальный текст для каждого лида и товара",
+      "description": "Практический гайд по spintax-ноде для n8n: уникальное холодное письмо на каждого лида или своё описание товара на каждую витрину, а шаблон пишет ваша LLM.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/spintax-for-n8n/",
+      "image": "https://ru.spintax.net/og/spintax-for-n8n.ru.png",
+      "tags": [
+        "spintax",
+        "n8n",
+        "automation"
+      ],
+      "crosspost": true
+    },
+    {
+      "slug": "docs-authoring-mindset",
+      "title": "Обратный порядок написания: текст сначала, разметка в конце",
+      "description": "Ментальная модель написания spintax-шаблонов, которые читаются в любой из тысяч сборок. Сначала готовая статья — потом разметка.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/docs/authoring-mindset/",
+      "image": "https://ru.spintax.net/og/docs-authoring-mindset.ru.png",
+      "tags": [
+        "spintax",
+        "authoring",
+        "workflow"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "docs-variables",
+      "title": "Переменные и переиспользование: множитель Spintax",
+      "description": "Как переменные превращают один spintax-шаблон в сеть сайтов. Приоритет, составные переменные, ловушка повторного решения, коллизии сепараторов.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/docs/variables/",
+      "image": "https://ru.spintax.net/og/docs-variables.ru.png",
+      "tags": [
+        "spintax",
+        "variables"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "docs-permutations",
+      "title": "Перестановки на практике: списки, заголовки, сепараторы",
+      "description": "Подробный разбор перестановок: синтаксис, конфигурация сепараторов, переопределение для элемента, серийные списки в заголовках, типичные ошибки.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/docs/permutations/",
+      "image": "https://ru.spintax.net/og/docs-permutations.ru.png",
+      "tags": [
+        "spintax",
+        "permutations"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "docs-conditional-spintax",
+      "title": "Условный spintax: {?VAR?then|else}",
+      "description": "Ветвление по значению в spintax-шаблонах. Три формы, правила truthy/falsy, двухпроходный пайплайн, и чем условие отличается от случайного выбора в {a|b}.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/docs/conditional-spintax/",
+      "image": "https://ru.spintax.net/og/docs-conditional-spintax.ru.png",
+      "tags": [
+        "spintax",
+        "conditionals"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "docs-grammar-safe-spintax",
+      "title": "Грамматически безопасный spintax: русские падежи и не только",
+      "description": "Как синонимизировать spintax-шаблоны, не ломая грамматику: правила связывания, английское согласование, русские падежи, род, управление и квантификаторы.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/docs/grammar-safe-spintax/",
+      "image": "https://ru.spintax.net/og/docs-grammar-safe-spintax.ru.png",
+      "tags": [
+        "spintax",
+        "grammar",
+        "synonymization"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "docs-template-composition",
+      "title": "Композиция шаблонов: переменная как готовая часть страницы",
+      "description": "Когда один большой шаблон перестаёт работать, его разбивают на маленькие, связанные переменными с готовым HTML. Разбор на примере страницы способов оплаты.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/docs/template-composition/",
+      "image": "https://ru.spintax.net/og/docs-template-composition.ru.png",
+      "tags": [
+        "spintax",
+        "templates",
+        "composition"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "docs-plural-spintax",
+      "title": "Согласование с числом: {plural N: form|…}",
+      "description": "Выбор нужной формы существительного по числу: 3 формы для RU/UK/BE и SR/HR/BS, 2 для английского типа. Синтаксис, краевые случаи, пример, сравнение с ICU.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/docs/plural-spintax/",
+      "image": "https://ru.spintax.net/og/docs-plural-spintax.ru.png",
+      "tags": [
+        "spintax",
+        "plurals",
+        "i18n"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "docs-repairing-spintax",
+      "title": "Починка spintax-шаблонов: по рецепту, а не переписыванием",
+      "description": "Как починить spintax-шаблон, который всё ещё рендерит брак: найти дефект, применить один именованный рецепт его класса, перепроверить. Рецепты по кодам линта.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/docs/repairing-spintax/",
+      "image": "https://ru.spintax.net/og/docs-repairing-spintax.ru.png",
+      "tags": [
+        "spintax",
+        "repair",
+        "grammar",
+        "lint"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "spintax-for-javascript",
+      "title": "Spintax для JavaScript и TypeScript — open-source движок @spintax/core",
+      "description": "Движок spintax для JS/TS без привязки к фреймворку: парсинг, рендер, валидация и нейтрализация шаблонов в Node 18+, Workers и браузере. MIT, ноль зависимостей.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/spintax-for-javascript/",
+      "image": "https://ru.spintax.net/og/spintax-for-javascript.ru.png",
+      "tags": [
+        "spintax",
+        "javascript",
+        "opensource"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "spintax-for-php",
+      "title": "Spintax для PHP — open-source движок spintax/core",
+      "description": "Open-source движок spintax для PHP 8.0+: перечисления, перестановки, переменные, условия, плюралы и include. Ноль зависимостей, MIT, на Packagist.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/spintax-for-php/",
+      "image": "https://ru.spintax.net/og/spintax-for-php.ru.png",
+      "tags": [
+        "spintax",
+        "php",
+        "opensource"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "russian-spintax-plurals",
+      "title": "Русский spintax: почему ваши числа всегда выглядят криво",
+      "description": "Любой существующий spintax-движок ломает русские числа: правилу нужна арифметика по модулю, а условные хаки её не выражают. Что ломается и чем это чинится.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/russian-spintax-plurals/",
+      "image": "https://ru.spintax.net/og/russian-spintax-plurals.ru.png",
+      "tags": [
+        "spintax",
+        "plurals",
+        "russian"
+      ],
+      "crosspost": false
+    },
+    {
+      "slug": "spintax-plural-design-trace",
+      "title": "От боли к примитиву: как Spintax получил согласование с числом",
+      "description": "Как проектировался примитив согласования с числом: анализ стоимости на реальных данных Generator, решения до кода и сверка рабочей реализации со спекой.",
+      "date": "2026-11-08",
+      "url": "https://ru.spintax.net/spintax-plural-design-trace/",
+      "image": "https://ru.spintax.net/og/spintax-plural-design-trace.ru.png",
+      "tags": [
+        "spintax",
+        "plurals",
+        "engineering"
+      ],
+      "crosspost": false
+    }
+  ]
+}
